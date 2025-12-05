@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CeayDocs logo dark">
+  <!-- Background -->
+  <rect x="0" y="0" width="600" height="200" fill="#121212"/>
+  <!-- Icon square -->
+  <g transform="translate(24,24)">
+    <rect width="128" height="128" rx="18" fill="#0B3F2B" />
+    <!-- document folded corner -->
+    <path d="M92 12 H44 A8 8 0 0 0 36 20 V108 A8 8 0 0 0 44 116 H108 A8 8 0 0 0 116 108 V44 L92 12 Z" fill="#FFFFFF" opacity="0.03"/>
+    <!-- stylized C (gold stroke) -->
+    <path d="M76 36 C58 36,46 52,46 68 C46 84,58 100,76 100" stroke="#DAA520" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- small document lines -->
+    <rect x="60" y="56" width="36" height="6" rx="3" fill="#DAA520" opacity="0.95"/>
+    <rect x="60" y="72" width="28" height="6" rx="3" fill="#FFFFFF" opacity="0.04"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(170,45)">
+    <text x="0" y="36" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#EDEDED">CeayDocs</text>
+    <text x="0" y="70" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#CCCCCC">document tools</text>
+  </g>
+</svg>

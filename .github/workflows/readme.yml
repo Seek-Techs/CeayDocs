@@ -1,0 +1,19 @@
+name: Generate README
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Generate README
+        uses: rahuldkjain/github-profile-readme-generator@master
+      - name: Commit README
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add README.md
+          git commit -m "Auto-update README" || echo "No changes"
+          git push
