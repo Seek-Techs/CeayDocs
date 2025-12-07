@@ -6,3 +6,4 @@ python-docx
 pdfminer.six
 PyPDF2
 reportlab
+weasyprint
