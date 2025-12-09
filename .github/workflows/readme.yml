@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: rahuldkjain/github-profile-readme-generator@main
       - name: Generate README
-        uses: rahuldkjain/github-profile-readme-generator@master
+        uses: rahuldkjain/github-profile-readme-generator@main
       - name: Commit README
         run: |
           git config --global user.name "github-actions"
