@@ -7,7 +7,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: uses: rahuldkjain/github-profile-readme-generator@main
       - name: Generate README
         uses: rahuldkjain/github-profile-readme-generator@master
       - name: Commit README
