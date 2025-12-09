@@ -7,3 +7,6 @@ pdfminer.six
 PyPDF2
 reportlab
 weasyprint
+fastapi
+uvicorn
+python-multipart

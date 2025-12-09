@@ -1,1 +1,23 @@
-pip freeze | findstr /v "packagename_to_exclude" > requirements.txt
+
+
+Rule:
+👉 utils/ = pure business logic
+👉 api/ = HTTP + validation + auth
+👉 app.py = UI only
+
+🔒 Golden Rules (memorize these)
+
+Read UploadFile exactly once
+
+Pass bytes to utils, not UploadFile
+
+Utils never call .read()
+
+API layer handles async, utils stay sync
+
+Rule (mandatory):
+
+All utils must accept bytes only.
+All routers must be responsible for reading the file exactly once.
+
+No exceptions.

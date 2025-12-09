@@ -1,57 +1,34 @@
 from PyPDF2 import PdfReader, PdfWriter
 import tempfile
-from io import BytesIO
-import os
 from pathlib import Path
 
-def _ensure_temp_file(input_obj, suffix=".pdf"):
-    if isinstance(input_obj, (str, Path)):
-        return str(input_obj), False
-    else:
-        tmp = tempfile.NamedTemporaryFile(delete=False, suffix=suffix)
-        tmp.write(input_obj.read())
-        tmp.close()
-        return tmp.name, True
 
-def split_pdf(pdf_file, output_path=None, start=1, end=1):
+def split_pdf(pdf_bytes: bytes, start: int, end: int) -> bytes:
     """
-    Split pages [start..end] (1-based).
-    - pdf_file: path or file-like
-    - output_path: optional path to write the output file; if None returns bytes
+    Split a PDF from start page to end page (1-based indexing).
     """
-    pdf_path, created_tmp = _ensure_temp_file(pdf_file, suffix=".pdf")
+    if start < 1 or end < start:
+        raise ValueError("Invalid page range")
 
-    reader = PdfReader(pdf_path)
-    writer = PdfWriter()
+    with tempfile.TemporaryDirectory() as tmpdir:
+        input_path = Path(tmpdir) / "input.pdf"
+        input_path.write_bytes(pdf_bytes)
 
-    # ensure bounds
-    total = len(reader.pages)
-    start_idx = max(0, start - 1)
-    end_idx = min(total, end)
+        reader = PdfReader(str(input_path))
+        total_pages = len(reader.pages)
 
-    for i in range(start_idx, end_idx):
-        writer.add_page(reader.pages[i])
+        if end > total_pages:
+            raise ValueError(
+                f"PDF has only {total_pages} pages, but end={end}"
+            )
 
-    if output_path:
-        out_path = str(output_path)
-        parent = Path(out_path).parent
-        if not parent.exists():
-            parent.mkdir(parents=True, exist_ok=True)
-        with open(out_path, "wb") as f:
+        writer = PdfWriter()
+
+        for i in range(start - 1, end):
+            writer.add_page(reader.pages[i])
+
+        output_path = Path(tmpdir) / "split.pdf"
+        with open(output_path, "wb") as f:
             writer.write(f)
-        if created_tmp and os.path.exists(pdf_path):
-            try:
-                os.remove(pdf_path)
-            except Exception:
-                pass
-        return True
-    else:
-        output = BytesIO()
-        writer.write(output)
-        output.seek(0)
-        if created_tmp and os.path.exists(pdf_path):
-            try:
-                os.remove(pdf_path)
-            except Exception:
-                pass
-        return output.read()
+
+        return output_path.read_bytes()
