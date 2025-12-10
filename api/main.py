@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api.routers import convert, compress, merge, split, extract, images
+from api.routers import convert, compress, merge, split, extract, images, drawings
 
 app = FastAPI(
     title="CeayDocs API",
@@ -13,3 +13,4 @@ app.include_router(merge.router, prefix="/merge", tags=["Merge"])
 app.include_router(split.router, prefix="/split", tags=["Split"])
 app.include_router(extract.router, prefix="/extract", tags=["Extract"])
 app.include_router(images.router, prefix="/images", tags=["Images"])
+app.include_router(drawings.router, prefix="/drawings", tags=["Drawings"])

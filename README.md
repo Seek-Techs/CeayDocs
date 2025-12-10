@@ -82,3 +82,6 @@ Your files stay **your files**.
 ```bash
 git clone https://github.com/Seek-Techs/CeayDocs.git
 cd CeayDocs
+
+
+![CI](https://github.com/Seek-Techs/CeayDocs/actions/workflows/ci.yml/badge.svg)

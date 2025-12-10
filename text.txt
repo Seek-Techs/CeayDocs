@@ -21,3 +21,95 @@ All utils must accept bytes only.
 All routers must be responsible for reading the file exactly once.
 
 No exceptions.
+
+FILE FLOW RULE (THIS FIXES YOUR EMPTY FILE ERRORS)
+
+SYSTEM LAW:
+👉 Everything inside core & utils uses BYTES, not file objects
+
+🟢 Core Layer (core/)
+
+Your competitive advantage lives here.
+
+Responsibilities:
+
+Drawing classification
+
+Engineering extraction
+
+Dimension parsing
+
+Scale detection
+
+View identification
+
+
+🔵 Services Layer (services/)
+
+This is your brain coordinator.
+
+Example:
+
+Upload PDF
+→ classify
+→ extract text/images
+→ parse engineering data
+→ return structured result
+
+
+Services decide WHAT HAPPENS, not HOW.
+
+
+🔴 FastAPI Routers (api/routers)
+
+DO NOT process files here.
+
+Only:
+
+Receive request
+
+Validate
+
+Call services/*
+
+Return response
+
+
+
+✅ PHASE 2.1 — ARCHITECTURE FIRST (FOUNDATION)
+1. HIGH-LEVEL SYSTEM ARCHITECTURE
+CeayDocs
+│
+├── api/                # FastAPI (public interface)
+│   ├── main.py
+│   └── routers/
+│       ├── drawings.py
+│       ├── convert.py
+│       ├── split.py
+│       └── health.py
+│
+├── core/               # Domain intelligence (AEC logic)
+│   ├── classify.py
+│   ├── extract.py
+│   ├── parse.py
+│   └── schemas.py
+│
+├── utils/              # Low-level technical helpers
+│   ├── files.py
+│   ├── images.py
+│   ├── pdf.py
+│   └── cleanup.py
+│
+├── services/           # Orchestration layer
+│   ├── analyzer.py
+│   └── exporter.py
+│   └── drawing_index.py
+│
+├── data/
+│   └── temp/           # Runtime temp files (gitignored)
+│
+├── tests/              # Unit + integration tests
+│
+├── app.py              # Streamlit UI (consumer)
+├── requirements.txt
+└── README.md
