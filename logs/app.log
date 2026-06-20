@@ -1,0 +1,209 @@
+2026-06-19 10:00:32 | test_logger_core | INFO | hello core foundation
+2026-06-19 10:00:32 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-19 10:02:06 | test_logger_core | INFO | hello core foundation
+2026-06-19 10:02:06 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-19 10:15:49 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-19 10:15:49 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-19 10:15:49 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.037s
+2026-06-19 10:16:03 | test_logger_core | INFO | hello core foundation
+2026-06-19 10:16:03 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-19 10:16:24 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-19 10:16:24 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-19 10:16:24 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.033s
+2026-06-19 10:16:40 | test_logger_core | INFO | hello core foundation
+2026-06-19 10:16:40 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-19 10:17:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-19 10:18:09 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-19 10:18:09 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=10.851s
+2026-06-19 10:18:10 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-19 10:18:10 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-19 10:18:10 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.039s
+2026-06-19 10:18:11 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-19 10:18:13 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-19 10:18:13 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.541s
+2026-06-19 10:18:13 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-19 10:18:13 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-19 10:18:13 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.257s
+2026-06-19 10:18:13 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-19 10:18:13 | services.operations.split_pdf_adapter | ERROR | split_pdf failed: Use bytes API via split_pdf_bytes
+2026-06-19 10:18:13 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.002s
+2026-06-19 10:18:16 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-19 10:18:17 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-19 10:18:17 | core.telemetry | INFO | operation=operation=extract_text elapsed=1.099s
+2026-06-19 10:18:43 | test_logger_core | INFO | hello core foundation
+2026-06-19 10:18:43 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-19 10:18:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-19 10:19:15 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-19 10:19:15 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=16.547s
+2026-06-19 10:19:16 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-19 10:19:17 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-19 10:19:17 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.715s
+2026-06-19 10:19:17 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-19 10:19:22 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-19 10:19:22 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=4.327s
+2026-06-19 10:19:22 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-19 10:19:23 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-19 10:19:23 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.687s
+2026-06-19 10:19:23 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-19 10:19:23 | services.operations.split_pdf_adapter | ERROR | split_pdf failed: Use bytes API via split_pdf_bytes
+2026-06-19 10:19:23 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-19 10:19:27 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-19 10:19:27 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-19 10:19:27 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.128s
+2026-06-19 10:19:44 | test_logger_core | INFO | hello core foundation
+2026-06-19 10:19:44 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:39:44 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:39:56 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:39:56 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=11.922s
+2026-06-20 14:39:56 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:39:56 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:39:56 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.048s
+2026-06-20 14:39:56 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:40:02 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:40:02 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=5.990s
+2026-06-20 14:40:03 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:40:04 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:40:04 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.231s
+2026-06-20 14:40:04 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:40:04 | services.operations.split_pdf_adapter | ERROR | split_pdf failed: Use bytes API via split_pdf_bytes
+2026-06-20 14:40:04 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-20 14:40:06 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:40:07 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:40:07 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.103s
+2026-06-20 14:40:18 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:40:19 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:40:44 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:40:51 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:40:51 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.253s
+2026-06-20 14:40:51 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:40:52 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:40:52 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.084s
+2026-06-20 14:40:52 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:40:54 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:40:54 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.531s
+2026-06-20 14:40:54 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:40:55 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:40:55 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.234s
+2026-06-20 14:40:55 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:40:55 | services.operations.split_pdf_adapter | ERROR | split_pdf failed: Use bytes API via split_pdf_bytes
+2026-06-20 14:40:55 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-20 14:41:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:41:57 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:41:57 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=9.476s
+2026-06-20 14:41:58 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:41:58 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:41:58 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.047s
+2026-06-20 14:41:58 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:42:01 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:42:01 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.909s
+2026-06-20 14:42:01 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:42:01 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:42:01 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.178s
+2026-06-20 14:42:01 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:42:01 | services.operations.split_pdf_adapter | ERROR | split_pdf failed: Use bytes API via split_pdf_bytes
+2026-06-20 14:42:01 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-20 14:42:05 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:42:06 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:42:06 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.139s
+2026-06-20 14:42:16 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:42:16 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:46:39 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:46:50 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:46:50 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=11.106s
+2026-06-20 14:46:52 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:46:52 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:46:52 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.165s
+2026-06-20 14:46:52 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:46:53 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:46:53 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.388s
+2026-06-20 14:46:53 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:46:54 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:46:54 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.249s
+2026-06-20 14:46:54 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:46:54 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-20 14:46:54 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.122s
+2026-06-20 14:46:54 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:46:54 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:46:54 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.078s
+2026-06-20 14:47:11 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:47:11 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:47:25 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:47:31 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:47:31 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.005s
+2026-06-20 14:47:32 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:47:32 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:47:32 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.027s
+2026-06-20 14:47:32 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:47:35 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:47:35 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=3.032s
+2026-06-20 14:47:35 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:47:35 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:47:35 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.139s
+2026-06-20 14:47:35 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:47:35 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-20 14:47:35 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.082s
+2026-06-20 14:47:35 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:47:35 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:47:35 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.046s
+2026-06-20 14:47:45 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:47:45 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:47:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:48:10 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:48:10 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=10.971s
+2026-06-20 14:48:10 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:48:10 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:48:10 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.051s
+2026-06-20 14:48:10 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:48:11 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:48:11 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.003s
+2026-06-20 14:48:11 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:48:12 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:48:12 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.280s
+2026-06-20 14:48:12 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:48:12 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-20 14:48:12 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.106s
+2026-06-20 14:48:12 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:48:12 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:48:12 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.066s
+2026-06-20 14:48:23 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:48:23 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:48:30 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:48:37 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:48:37 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.113s
+2026-06-20 14:48:37 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:48:37 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:48:37 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.065s
+2026-06-20 14:48:38 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:48:39 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:48:39 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.750s
+2026-06-20 14:48:39 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:48:39 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:48:39 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.134s
+2026-06-20 14:48:39 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:48:40 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-20 14:48:40 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.074s
+2026-06-20 14:48:40 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:48:40 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:48:40 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.043s
+2026-06-20 14:48:52 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:48:52 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-20 14:49:39 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-20 14:49:57 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-20 14:49:57 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=18.056s
+2026-06-20 14:49:57 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-20 14:49:57 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-20 14:49:57 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.030s
+2026-06-20 14:49:58 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-20 14:50:01 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-20 14:50:01 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.989s
+2026-06-20 14:50:01 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-20 14:50:01 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-20 14:50:01 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.328s
+2026-06-20 14:50:01 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-20 14:50:03 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-20 14:50:03 | core.telemetry | INFO | operation=operation=split_pdf elapsed=1.395s
+2026-06-20 14:50:03 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-20 14:50:03 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-20 14:50:03 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.277s
+2026-06-20 14:50:16 | test_logger_core | INFO | hello core foundation
+2026-06-20 14:50:16 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s

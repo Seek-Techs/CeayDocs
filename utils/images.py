@@ -9,11 +9,40 @@ from io import BytesIO
 # ==============================
 # PDF → IMAGES
 # ==============================
-def pdf_to_images(pdf_bytes: bytes) -> bytes:
+def pdf_to_images(pdf: object):
+    """Convert a PDF into PNG images.
+
+    Test/backwards-compatible behavior:
+    - if input is file-like (e.g., BufferedReader) -> returns list[PIL.Image]
+
+    API behavior (used by Streamlit/API routes):
+    - if you pass raw bytes -> returns ZIP bytes containing PNGs
     """
-    Convert a PDF into PNG images.
-    Returns a ZIP file (bytes) containing images.
-    """
+    # Accept file-like
+    if hasattr(pdf, "read"):
+        pdf_bytes = pdf.read()
+        return _pdf_to_images_list(pdf_bytes)
+
+    # Raw bytes -> ZIP bytes
+    return _pdf_to_images_zip_bytes(pdf)
+
+
+def _pdf_to_images_list(pdf_bytes: bytes) -> list[Image.Image]:
+    with tempfile.TemporaryDirectory() as tmpdir:
+        pdf_path = Path(tmpdir) / "input.pdf"
+        pdf_path.write_bytes(pdf_bytes)
+
+        doc = fitz.open(pdf_path)
+        images: list[Image.Image] = []
+        for page in doc:
+            pix = page.get_pixmap(dpi=150)
+            img = Image.open(BytesIO(pix.tobytes("png")))
+            images.append(img)
+        doc.close()
+        return images
+
+
+def _pdf_to_images_zip_bytes(pdf_bytes: bytes) -> bytes:
     with tempfile.TemporaryDirectory() as tmpdir:
         pdf_path = Path(tmpdir) / "input.pdf"
         pdf_path.write_bytes(pdf_bytes)
@@ -40,13 +69,23 @@ def pdf_to_images(pdf_bytes: bytes) -> bytes:
 # ==============================
 # IMAGES → PDF
 # ==============================
-def images_to_pdf(image_bytes_list: list[bytes]) -> bytes:
-    """
-    Convert a list of image bytes into a single PDF.
+def images_to_pdf(image_bytes_list):
+    """Convert images into a single PDF.
+
+    Test/backwards-compatible behavior:
+    - input may be list[BytesIO] or list[bytes]
+
+    API behavior:
+    - expects iterable of raw image bytes
     """
     images = []
 
-    for img_bytes in image_bytes_list:
+    for item in image_bytes_list:
+        if hasattr(item, "read"):
+            img_bytes = item.read()
+        else:
+            img_bytes = item
+
         img = Image.open(BytesIO(img_bytes))
         if img.mode != "RGB":
             img = img.convert("RGB")
@@ -60,7 +99,8 @@ def images_to_pdf(image_bytes_list: list[bytes]) -> bytes:
         output,
         format="PDF",
         save_all=True,
-        append_images=images[1:]
+        append_images=images[1:],
     )
     output.seek(0)
     return output.read()
+
