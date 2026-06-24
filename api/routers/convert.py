@@ -4,6 +4,8 @@ import io
 
 from utils.convert import pdf_to_word
 
+from core.file_naming import generate_converted_filename
+
 router = APIRouter()
 
 
@@ -19,8 +21,14 @@ async def pdf_to_word_api(file: UploadFile = File(...)):
 
     output_bytes = pdf_to_word(pdf_bytes)
 
+    file_name = generate_converted_filename(
+        file.filename,
+        src_ext=".pdf",
+        target_ext=".docx",
+    )
+
     return StreamingResponse(
         io.BytesIO(output_bytes),
         media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        headers={"Content-Disposition": "attachment; filename=converted.docx"}
+        headers={"Content-Disposition": f"attachment; filename={file_name}"},
     )

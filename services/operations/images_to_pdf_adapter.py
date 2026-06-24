@@ -1,11 +1,17 @@
 from __future__ import annotations
 
 from core.exceptions import ConversionError
+
 from core.logger import get_logger
+
 from core.telemetry import elapsed_time
 from services.operations.images_ops import images_to_pdf_op
 
+from services.operations.exception_mapper import map_exception_for_operation
+
+
 logger = get_logger(__name__)
+
 
 
 def images_to_pdf_adapter(image_bytes_list: list[bytes]) -> bytes:
@@ -17,6 +23,13 @@ def images_to_pdf_adapter(image_bytes_list: list[bytes]) -> bytes:
             logger.info("Completed images_to_pdf (out_bytes=%d)", len(out))
             return out
         except Exception as e:  # noqa: BLE001
-            logger.error("images_to_pdf failed: %s", e)
-            raise ConversionError("Images -> PDF failed") from e
+            mapped = map_exception_for_operation("images_to_pdf", e)
+            logger.exception(
+                "images_to_pdf failed (mapped=%s original=%s)",
+                type(mapped).__name__,
+                type(e).__name__,
+            )
+            raise mapped from e
+
+
 

@@ -7,6 +7,9 @@ from core.logger import get_logger
 from core.telemetry import elapsed_time
 from services.operations.merge_ops import merge_pdfs_op
 
+from services.operations.exception_mapper import map_exception_for_operation
+
+
 logger = get_logger(__name__)
 
 
@@ -21,6 +24,14 @@ def merge_pdfs_adapter(pdf_bytes_list: Iterable[bytes]) -> bytes:
             logger.info("Completed merge_pdfs (out_bytes=%d)", len(out))
             return out
         except Exception as e:  # noqa: BLE001
-            logger.error("merge_pdfs failed: %s", e)
-            raise ConversionError("PDF merge failed") from e
+            mapped = map_exception_for_operation("merge_pdfs", e)
+            logger.error(
+                "merge_pdfs failed (mapped=%s original=%s): %s",
+                type(mapped).__name__,
+                type(e).__name__,
+                e,
+            )
+            raise mapped from e
+
+
 

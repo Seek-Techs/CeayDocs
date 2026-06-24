@@ -7,6 +7,9 @@ from core.logger import get_logger
 from core.telemetry import elapsed_time
 from utils.convert import pdf_to_word
 
+from services.operations.exception_mapper import map_exception_for_operation
+
+
 logger = get_logger(__name__)
 
 
@@ -25,6 +28,14 @@ def pdf_to_word_adapter(pdf_bytes: bytes) -> bytes:
             logger.info("Completed PDF -> Word conversion (out_bytes=%d)", len(out_bytes))
             return out_bytes
         except Exception as e:  # noqa: BLE001
-            logger.error("PDF -> Word conversion failed: %s", e)
-            raise ConversionError("PDF -> Word conversion failed") from e
+            mapped = map_exception_for_operation("pdf_to_word", e)
+            # Log mapped exception type + original exception type for debugging.
+            logger.error(
+                "PDF -> Word conversion failed (mapped=%s original=%s): %s",
+                type(mapped).__name__,
+                type(e).__name__,
+                e,
+            )
+            raise mapped from e
+
 
