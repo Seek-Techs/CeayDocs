@@ -1,9 +1,10 @@
-import fitz  # PyMuPDF
 import tempfile
-from pathlib import Path
 import zipfile
-from PIL import Image
 from io import BytesIO
+from pathlib import Path
+
+import fitz  # PyMuPDF
+from PIL import Image
 
 
 # ==============================

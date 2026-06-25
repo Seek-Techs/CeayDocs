@@ -1,4 +1,5 @@
-from fastapi import APIRouter, UploadFile, File
+from fastapi import APIRouter, File, UploadFile
+
 from services.analyzer import analyze_drawing
 
 router = APIRouter()

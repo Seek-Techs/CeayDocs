@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from api.routers import convert, compress, merge, split, extract, images, drawings
+
+from api.routers import compress, convert, drawings, extract, images, merge, split
 
 app = FastAPI(
     title="CeayDocs API",

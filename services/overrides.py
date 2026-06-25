@@ -1,5 +1,6 @@
 # services/overrides.py
-from typing import Dict, Any, List
+from typing import Any, Dict, List
+
 
 def apply_overrides(
     pages: List[Dict[str, Any]],

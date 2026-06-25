@@ -1,12 +1,9 @@
 from __future__ import annotations
 
-from core.exceptions import ConversionError
 from core.logger import get_logger
 from core.telemetry import elapsed_time
-from utils.images import pdf_to_images
-
 from services.operations.exception_mapper import map_exception_for_operation
-
+from utils.images import pdf_to_images
 
 logger = get_logger(__name__)
 

@@ -1,12 +1,9 @@
 from __future__ import annotations
 
-from core.exceptions import CompressionError
 from core.logger import get_logger
 from core.telemetry import elapsed_time
 from services.operations.compress_ops import compress_pdf_op
-
 from services.operations.exception_mapper import map_exception_for_operation
-
 
 logger = get_logger(__name__)
 

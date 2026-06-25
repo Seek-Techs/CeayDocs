@@ -1,12 +1,9 @@
 from __future__ import annotations
 
-from core.exceptions import ConversionError
 from core.logger import get_logger
 from core.telemetry import elapsed_time
-from services.operations.extract_ops import extract_text_op
-
 from services.operations.exception_mapper import map_exception_for_operation
-
+from services.operations.extract_ops import extract_text_op
 
 logger = get_logger(__name__)
 

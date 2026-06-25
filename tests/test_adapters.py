@@ -1,14 +1,13 @@
 from __future__ import annotations
 
 from pathlib import Path
-import pytest
 
-from services.operations.pdf_to_word_adapter import pdf_to_word_adapter
-from services.operations.word_to_pdf_adapter import word_to_pdf_adapter
-from services.operations.merge_pdf_adapter import merge_pdfs_adapter
-from services.operations.split_pdf_adapter import split_pdf_adapter
 from services.operations.compress_pdf_adapter import compress_pdf_adapter
 from services.operations.extract_text_adapter import extract_text_adapter
+from services.operations.merge_pdf_adapter import merge_pdfs_adapter
+from services.operations.pdf_to_word_adapter import pdf_to_word_adapter
+from services.operations.split_pdf_adapter import split_pdf_adapter
+from services.operations.word_to_pdf_adapter import word_to_pdf_adapter
 
 
 def _sample_pdf_bytes() -> bytes:

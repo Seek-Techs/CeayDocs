@@ -1,0 +1,30 @@
+[tool.coverage.run]
+branch = true
+source = ["core", "services", "utils", "api", "models"]
+
+# Coverage in this repo is dominated by optional/integration code paths.
+# We enforce a repo-level threshold via CI using the aggregate number.
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 0
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+# Keep this lightweight for Phase 4: enforce imports/undefined names,
+# but don't block the repo due to pre-existing style issues.
+select = ["F", "E", "W", "I", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["core", "services", "utils", "api", "models"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+ignore_missing_imports = true
+strict_optional = true
+check_untyped_defs = true
+

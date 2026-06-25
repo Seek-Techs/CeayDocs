@@ -1,6 +1,8 @@
-from utils.split import split_pdf
+
 from PyPDF2 import PdfWriter
-from pathlib import Path
+
+from utils.split import split_pdf
+
 
 def test_split_pdf(tmp_path):
     # Create a 3-page PDF

@@ -1,12 +1,13 @@
+import io
+import logging
+import traceback
+from typing import Any, Dict, List, Union
+
 from core.classify import classify_pdf
+from services.drawing_index import generate_index, generate_qa, index_to_csv
+from services.scale_detector import detect_scales
 from services.view_classifier import classify_pdf_views
 from services.view_splitter import split_views_into_pdfs
-from services.scale_detector import detect_scales
-from services.drawing_index import generate_index, generate_qa, index_to_csv
-from typing import Dict, Any, List, Union
-import logging
-import io
-import traceback
 
 logger = logging.getLogger(__name__)
 

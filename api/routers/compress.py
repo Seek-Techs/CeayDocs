@@ -1,12 +1,9 @@
-from fastapi import APIRouter, UploadFile, File
-from fastapi.responses import StreamingResponse
 import io
 
 from CeayDocs.api.core.errors import bad_request
-
 from CeayDocs.services.operations.compress_ops import compress_pdf_op
-
-
+from fastapi import APIRouter, File, UploadFile
+from fastapi.responses import StreamingResponse
 
 router = APIRouter()
 

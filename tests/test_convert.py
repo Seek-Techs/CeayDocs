@@ -1,6 +1,7 @@
-import pytest
-from utils.convert import pdf_to_word, word_to_pdf
 from pathlib import Path
+
+from utils.convert import pdf_to_word, word_to_pdf
+
 
 def test_pdf_to_word(tmp_path):
     pdf_file = Path("tests/sample.pdf")

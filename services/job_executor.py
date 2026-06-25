@@ -1,14 +1,11 @@
 from __future__ import annotations
 
-from dataclasses import asdict
 from typing import Any, Callable
 
+from core.metrics import get_metrics_collector
 from core.result import OperationResult
 from core.telemetry import elapsed_time
-from core.metrics import get_metrics_collector
-
 from models.operation_request import OperationRequest
-from models.operation_response import OperationResponse
 
 
 class JobExecutor:

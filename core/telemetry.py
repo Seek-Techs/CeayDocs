@@ -3,10 +3,9 @@ from __future__ import annotations
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
-from typing import Any, Callable, Generator, Optional, TypeVar, cast
+from typing import Any, Callable, Generator, TypeVar, cast
 
 from .logger import get_logger
-
 
 _T = TypeVar("_T")
 logger = get_logger(__name__)

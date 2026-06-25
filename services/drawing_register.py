@@ -1,6 +1,7 @@
 # services/drawing_register.py
-from typing import List, Dict, Any
 from datetime import datetime
+from typing import Any, Dict, List
+
 
 def infer_discipline(view_type: str) -> str:
     vt = view_type.upper()

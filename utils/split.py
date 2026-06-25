@@ -1,6 +1,7 @@
-from PyPDF2 import PdfReader, PdfWriter
 import tempfile
 from pathlib import Path
+
+from PyPDF2 import PdfReader, PdfWriter
 
 
 def split_pdf(pdf: str, output: str | None = None, start: int = 1, end: int = 1) -> bytes:

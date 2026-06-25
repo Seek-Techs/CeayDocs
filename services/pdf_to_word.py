@@ -1,5 +1,6 @@
 # services/pdf_to_word.py
 import logging
+
 from utils.convert import pdf_to_word as util_pdf_to_word
 
 logger = logging.getLogger(__name__)
@@ -12,7 +13,7 @@ class PdfToWordService:
     - Validate input bytes
     - Provide a single call entrypoint for UI/API
     - Central place for future job wiring, logging, timeouts, retries
-    
+
     """
 
     def execute(self, input_bytes: bytes) -> bytes:

@@ -3,7 +3,7 @@ from __future__ import annotations
 import time
 from contextlib import contextmanager
 from dataclasses import dataclass
-from typing import Any, Callable, Generator, Optional
+from typing import Any, Generator
 
 from core.logger import get_logger
 

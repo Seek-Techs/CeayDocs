@@ -1,5 +1,6 @@
+
 import fitz  # PyMuPDF
-from io import BytesIO
+
 
 def classify_pdf(pdf_bytes: bytes) -> dict:
     doc = fitz.open(stream=pdf_bytes, filetype="pdf")

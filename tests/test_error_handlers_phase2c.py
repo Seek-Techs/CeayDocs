@@ -4,11 +4,11 @@ import pytest
 
 from core.error_handlers import translate_error
 from core.exceptions import (
-    FileValidationError,
-    UnsupportedFormatError,
-    OCRProcessingError,
     CompressionError,
     ConversionError,
+    FileValidationError,
+    OCRProcessingError,
+    UnsupportedFormatError,
 )
 
 

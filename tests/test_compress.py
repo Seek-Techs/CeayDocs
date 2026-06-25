@@ -1,8 +1,9 @@
-import pytest
-from utils.compress import compress_pdf
 import shutil
-from pathlib import Path
+
+import pytest
 from PyPDF2 import PdfWriter
+
+from utils.compress import compress_pdf
 
 HAS_GS = shutil.which("gswin64c") or shutil.which("gs") or shutil.which("gswin32c")
 

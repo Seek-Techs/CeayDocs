@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from utils.images import pdf_to_images, images_to_pdf
+from utils.images import images_to_pdf, pdf_to_images
 
 
 def pdf_to_images_op(pdf_bytes: bytes) -> bytes:

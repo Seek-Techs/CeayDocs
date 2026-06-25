@@ -1,6 +1,8 @@
-from utils.merge import merge_pdfs
+
 from PyPDF2 import PdfWriter
-from pathlib import Path
+
+from utils.merge import merge_pdfs
+
 
 def test_merge_pdfs(tmp_path):
     # Create 2 small test PDFs

@@ -1,22 +1,23 @@
 # app.py (full file - main Streamlit app)
+import hashlib
+import io
+from io import BytesIO
+from pathlib import Path
+
+import fitz
+import pandas as pd
 import streamlit as st
+from PIL import Image
+
+from services.analyzer import analyze_drawing
+from services.drawing_index import generate_index, generate_qa, index_to_csv
+from services.drawing_register import build_register
+from utils.compress import _find_ghostscript, compress_pdf
 from utils.convert import pdf_to_word, word_to_pdf
+from utils.extract import extract_text_from_pdf
+from utils.images import images_to_pdf, pdf_to_images
 from utils.merge import merge_pdfs
 from utils.split import split_pdf
-from utils.compress import compress_pdf
-from utils.extract import extract_text_from_pdf
-from utils.images import pdf_to_images, images_to_pdf
-from services.drawing_index import generate_index, generate_qa, index_to_csv
-from services.analyzer import analyze_drawing
-from services.drawing_register import build_register
-import pandas as pd
-from pathlib import Path
-import io
-from utils.compress import _find_ghostscript
-import hashlib
-import fitz
-from io import BytesIO
-from PIL import Image
 
 # paths
 ASSETS = Path(__file__).parent / "assets"
@@ -212,8 +213,8 @@ elif menu == "PDF → Images":
         with st.spinner("Extracting images..."):
             images = pdf_to_images(pdf)  # returns list[BytesIO]
         # create a ZIP for download
-        from io import BytesIO as _BytesIO
         import zipfile as _zipfile
+        from io import BytesIO as _BytesIO
         zip_buf = _BytesIO()
         with _zipfile.ZipFile(zip_buf, "w") as z:
             for i, img in enumerate(images):
@@ -470,4 +471,3 @@ elif menu == "Drawing Analyzer (AEC)":
         else:
             st.write("No QA issues detected.")
 
-        

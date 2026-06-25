@@ -1,6 +1,7 @@
-from fastapi import APIRouter, UploadFile, File, Query
-from fastapi.responses import StreamingResponse
 import io
+
+from fastapi import APIRouter, File, UploadFile
+from fastapi.responses import StreamingResponse
 
 from utils.split import split_pdf
 

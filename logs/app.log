@@ -1029,3 +1029,1440 @@
 2026-06-24 15:56:15 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
 2026-06-24 15:56:15 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
 2026-06-24 15:56:15 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-24 16:52:22 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 16:53:02 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 16:53:02 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=40.012s
+2026-06-24 16:53:09 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 16:53:10 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 16:53:10 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.672s
+2026-06-24 16:53:10 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 16:53:22 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 16:53:22 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=12.413s
+2026-06-24 16:53:23 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 16:53:26 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 16:53:26 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=2.234s
+2026-06-24 16:53:26 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 16:53:26 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 16:53:26 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.194s
+2026-06-24 16:53:26 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 16:53:26 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 16:53:26 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.116s
+2026-06-24 16:53:41 | test_logger_core | INFO | hello core foundation
+2026-06-24 16:53:41 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 16:53:45 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 16:53:52 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 16:53:52 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.189s
+2026-06-24 16:53:52 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 16:53:52 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 16:53:52 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.032s
+2026-06-24 16:53:52 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 16:53:52 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 16:53:52 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.142s
+2026-06-24 16:53:52 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 16:53:52 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 16:53:52 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.093s
+2026-06-24 16:53:52 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 16:53:53 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.669s
+2026-06-24 16:53:53 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 16:53:53 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.058s
+2026-06-24 16:53:53 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 16:53:53 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.005s
+2026-06-24 16:53:53 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 16:53:53 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 16:53:53 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 16:53:53 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-24 16:53:53 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 16:53:53 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.009s
+2026-06-24 16:53:53 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 16:53:53 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.158s
+2026-06-24 16:53:53 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 16:53:53 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 16:53:53 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 16:53:53 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 16:53:53 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-24 17:03:09 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:03:17 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:03:17 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=8.510s
+2026-06-24 17:03:18 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:03:18 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:03:18 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.027s
+2026-06-24 17:03:18 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:03:20 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:03:20 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.503s
+2026-06-24 17:03:20 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:03:21 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:03:21 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.416s
+2026-06-24 17:03:21 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:03:21 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:03:21 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.305s
+2026-06-24 17:03:21 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:03:21 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:03:21 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.099s
+2026-06-24 17:03:37 | test_logger_core | INFO | hello core foundation
+2026-06-24 17:03:37 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 17:03:38 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:03:46 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.534s
+2026-06-24 17:03:46 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:03:46 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.037s
+2026-06-24 17:03:46 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:03:46 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.112s
+2026-06-24 17:03:46 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:03:46 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.124s
+2026-06-24 17:03:46 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:03:46 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.281s
+2026-06-24 17:03:46 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:03:46 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.032s
+2026-06-24 17:03:46 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:03:46 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.000s
+2026-06-24 17:03:46 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:03:46 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:03:46 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 17:03:46 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.021s
+2026-06-24 17:03:46 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:03:46 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 17:03:46 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.004s
+2026-06-24 17:03:46 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:03:47 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 17:03:47 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.127s
+2026-06-24 17:03:47 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:03:47 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 17:03:47 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 17:03:47 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:03:47 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 17:03:47 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.002s
+2026-06-24 17:04:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:05:05 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:05:05 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.384s
+2026-06-24 17:05:06 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:05:06 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:05:06 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.057s
+2026-06-24 17:05:06 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:05:09 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:05:09 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=3.005s
+2026-06-24 17:05:09 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:05:09 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:05:09 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.131s
+2026-06-24 17:05:09 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:05:09 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:05:09 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.080s
+2026-06-24 17:05:09 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:05:09 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:05:09 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.052s
+2026-06-24 17:05:27 | test_logger_core | INFO | hello core foundation
+2026-06-24 17:05:27 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 17:05:28 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:05:53 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:05:53 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=25.389s
+2026-06-24 17:05:53 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:05:53 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:05:53 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.035s
+2026-06-24 17:05:54 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:05:54 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:05:54 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.148s
+2026-06-24 17:05:54 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:05:54 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:05:54 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.089s
+2026-06-24 17:05:54 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:05:54 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:05:54 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.555s
+2026-06-24 17:05:54 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:05:54 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:05:54 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.092s
+2026-06-24 17:05:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:05:55 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:05:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:05:55 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:05:55 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 17:05:55 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.005s
+2026-06-24 17:05:55 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:05:55 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.017s
+2026-06-24 17:05:55 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:05:55 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.333s
+2026-06-24 17:05:55 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:05:55 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 17:05:55 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:05:55 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 17:05:55 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.009s
+2026-06-24 17:08:10 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:08:18 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:08:18 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=8.908s
+2026-06-24 17:08:19 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:08:19 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:08:19 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.039s
+2026-06-24 17:08:19 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:08:24 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:08:24 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=5.079s
+2026-06-24 17:08:24 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:08:24 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:08:24 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.285s
+2026-06-24 17:08:24 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:08:24 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:08:24 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.139s
+2026-06-24 17:08:24 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:08:24 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:08:24 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.077s
+2026-06-24 17:08:53 | test_logger_core | INFO | hello core foundation
+2026-06-24 17:08:53 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 17:08:56 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:09:07 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:09:07 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=10.965s
+2026-06-24 17:09:07 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:09:08 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:09:08 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.222s
+2026-06-24 17:09:08 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:09:08 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:09:08 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.227s
+2026-06-24 17:09:08 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:09:08 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:09:08 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.106s
+2026-06-24 17:09:08 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:09:09 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.405s
+2026-06-24 17:09:09 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:09:09 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.034s
+2026-06-24 17:09:09 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:09:09 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:09:09 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:09:09 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.003s
+2026-06-24 17:09:09 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 17:09:09 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-24 17:09:09 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:09:09 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.006s
+2026-06-24 17:09:09 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:09:09 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.120s
+2026-06-24 17:09:09 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:09:09 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 17:09:09 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:09:09 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 17:09:09 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-24 17:09:24 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:09:30 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:09:30 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.066s
+2026-06-24 17:09:30 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:09:30 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:09:30 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.022s
+2026-06-24 17:09:30 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:09:33 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:09:33 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.305s
+2026-06-24 17:09:33 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:09:33 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:09:33 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.512s
+2026-06-24 17:09:33 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:09:33 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:09:33 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.170s
+2026-06-24 17:09:33 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:09:34 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:09:34 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.132s
+2026-06-24 17:09:48 | test_logger_core | INFO | hello core foundation
+2026-06-24 17:09:48 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 17:09:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:09:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:09:59 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:09:59 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=10.533s
+2026-06-24 17:09:59 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:09:59 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:09:59 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.108s
+2026-06-24 17:09:59 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:09:59 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:09:59 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.109s
+2026-06-24 17:09:59 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:09:59 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:09:59 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.056s
+2026-06-24 17:09:59 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:10:00 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.314s
+2026-06-24 17:10:00 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:00 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.033s
+2026-06-24 17:10:00 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:10:00 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:10:00 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:10:00 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:10:00 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 17:10:00 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-24 17:10:00 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:00 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.003s
+2026-06-24 17:10:00 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:10:00 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.088s
+2026-06-24 17:10:00 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:00 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 17:10:00 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:10:00 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 17:10:00 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-24 17:10:06 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:10:06 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.777s
+2026-06-24 17:10:06 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:10:06 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:10:06 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.024s
+2026-06-24 17:10:06 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:10:10 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:10:10 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=3.781s
+2026-06-24 17:10:10 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:10:10 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:10:10 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.234s
+2026-06-24 17:10:10 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:10:10 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:10:10 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.092s
+2026-06-24 17:10:10 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:10 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:10:10 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.109s
+2026-06-24 17:10:34 | test_logger_core | INFO | hello core foundation
+2026-06-24 17:10:34 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 17:10:36 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:10:58 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:10:58 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=22.074s
+2026-06-24 17:10:58 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:10:58 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:10:58 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.029s
+2026-06-24 17:10:58 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:10:58 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:10:58 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.203s
+2026-06-24 17:10:58 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:10:59 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.122s
+2026-06-24 17:10:59 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:10:59 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.520s
+2026-06-24 17:10:59 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:59 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.036s
+2026-06-24 17:10:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:10:59 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.002s
+2026-06-24 17:10:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:10:59 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-24 17:10:59 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 17:10:59 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.006s
+2026-06-24 17:10:59 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:59 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.003s
+2026-06-24 17:10:59 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:10:59 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.102s
+2026-06-24 17:10:59 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:10:59 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 17:10:59 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:10:59 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 17:10:59 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-24 17:11:00 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:11:05 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:11:05 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.827s
+2026-06-24 17:11:05 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:11:06 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:11:06 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.074s
+2026-06-24 17:11:06 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:11:08 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:11:08 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.386s
+2026-06-24 17:11:08 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:11:08 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:11:08 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.153s
+2026-06-24 17:11:08 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:11:08 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:11:08 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.093s
+2026-06-24 17:11:08 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:11:08 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:11:08 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.037s
+2026-06-24 17:11:17 | test_logger_core | INFO | hello core foundation
+2026-06-24 17:11:17 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-24 17:11:18 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:11:23 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.134s
+2026-06-24 17:11:23 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:11:23 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.018s
+2026-06-24 17:11:23 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-24 17:11:23 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.067s
+2026-06-24 17:11:23 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-24 17:11:23 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.044s
+2026-06-24 17:11:23 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:11:23 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.235s
+2026-06-24 17:11:23 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:11:23 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.029s
+2026-06-24 17:11:23 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:11:23 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.000s
+2026-06-24 17:11:23 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-24 17:11:23 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.000s
+2026-06-24 17:11:23 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-24 17:11:23 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-24 17:11:23 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:11:23 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-24 17:11:23 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.008s
+2026-06-24 17:11:23 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-24 17:11:24 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-24 17:11:24 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.106s
+2026-06-24 17:11:24 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-24 17:11:24 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-24 17:11:24 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-24 17:11:24 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-24 17:11:24 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-24 17:11:24 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:24:21 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:24:29 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:24:29 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.889s
+2026-06-25 12:24:29 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:24:29 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:24:29 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.070s
+2026-06-25 12:24:31 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:24:32 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:24:32 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.944s
+2026-06-25 12:24:32 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:24:33 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:24:33 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.193s
+2026-06-25 12:24:33 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:24:33 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:24:33 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.142s
+2026-06-25 12:24:33 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:24:33 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:24:33 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.074s
+2026-06-25 12:24:51 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:24:51 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:24:54 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:11 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:25:11 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=16.895s
+2026-06-25 12:25:11 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:25:11 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:25:11 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.029s
+2026-06-25 12:25:11 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:25:12 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:25:12 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.230s
+2026-06-25 12:25:12 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:25:12 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:25:12 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.071s
+2026-06-25 12:25:12 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:25:13 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.679s
+2026-06-25 12:25:13 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:13 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.073s
+2026-06-25 12:25:13 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:13 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:25:13 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:13 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:25:13 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:25:13 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:25:13 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:13 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.045s
+2026-06-25 12:25:13 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:25:13 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.209s
+2026-06-25 12:25:13 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:13 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:25:13 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:25:13 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:25:13 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:25:13 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:25:14 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:25:26 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:34 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:25:34 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.258s
+2026-06-25 12:25:34 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:25:34 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:25:34 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.030s
+2026-06-25 12:25:34 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:25:36 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:25:36 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.872s
+2026-06-25 12:25:36 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:25:36 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:25:36 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.114s
+2026-06-25 12:25:36 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:25:36 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:25:36 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.094s
+2026-06-25 12:25:36 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:36 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:25:36 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.055s
+2026-06-25 12:25:48 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:25:48 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:25:50 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:57 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:25:57 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.492s
+2026-06-25 12:25:57 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:25:57 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:25:57 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.031s
+2026-06-25 12:25:57 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:25:58 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.119s
+2026-06-25 12:25:58 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:25:58 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.062s
+2026-06-25 12:25:58 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:25:58 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.421s
+2026-06-25 12:25:58 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:58 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.034s
+2026-06-25 12:25:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:58 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:25:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:25:58 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:25:58 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:25:58 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.003s
+2026-06-25 12:25:58 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:58 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.003s
+2026-06-25 12:25:58 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:25:58 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.122s
+2026-06-25 12:25:58 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:25:58 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.003s
+2026-06-25 12:25:58 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:25:58 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:25:58 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.007s
+2026-06-25 12:25:58 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:25:59 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:26:16 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:26:22 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:26:22 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.573s
+2026-06-25 12:26:22 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:26:22 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:26:22 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.028s
+2026-06-25 12:26:23 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:26:24 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:26:24 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.515s
+2026-06-25 12:26:24 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:26:24 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:26:24 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.176s
+2026-06-25 12:26:25 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:26:25 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:26:25 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.338s
+2026-06-25 12:26:25 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:26:25 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:26:25 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.160s
+2026-06-25 12:26:36 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:26:36 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:26:37 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:26:43 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:26:43 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.509s
+2026-06-25 12:26:43 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:26:44 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.026s
+2026-06-25 12:26:44 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:26:44 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.106s
+2026-06-25 12:26:44 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:26:44 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.064s
+2026-06-25 12:26:44 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:26:44 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.344s
+2026-06-25 12:26:44 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:26:44 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.046s
+2026-06-25 12:26:44 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:26:44 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:26:44 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:26:44 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:26:44 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:26:44 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:26:44 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:26:44 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.037s
+2026-06-25 12:26:44 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:26:44 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.105s
+2026-06-25 12:26:44 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:26:44 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:26:44 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:26:44 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:26:44 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:26:45 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.002s file_size_bytes=None
+2026-06-25 12:26:46 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:30:25 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:30:30 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:30:30 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.177s
+2026-06-25 12:30:30 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:30:30 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:30:30 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.026s
+2026-06-25 12:30:30 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:30:32 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:30:32 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.250s
+2026-06-25 12:30:32 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:30:32 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:30:32 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.214s
+2026-06-25 12:30:32 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:30:32 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:30:32 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.135s
+2026-06-25 12:30:32 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:30:32 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:30:32 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.050s
+2026-06-25 12:30:41 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:30:41 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:30:42 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:30:47 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:30:47 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.194s
+2026-06-25 12:30:47 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:30:47 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:30:47 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.040s
+2026-06-25 12:30:47 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:30:47 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:30:47 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.106s
+2026-06-25 12:30:47 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:30:47 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:30:47 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.067s
+2026-06-25 12:30:47 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:30:48 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.389s
+2026-06-25 12:30:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:30:48 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.075s
+2026-06-25 12:30:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:30:48 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.003s
+2026-06-25 12:30:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:30:48 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:30:48 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:30:48 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:30:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:30:48 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.019s
+2026-06-25 12:30:48 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:30:48 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.091s
+2026-06-25 12:30:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:30:48 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:30:48 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:30:48 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:30:48 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.002s file_size_bytes=None
+2026-06-25 12:30:48 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:35:22 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:35:28 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:35:28 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.611s
+2026-06-25 12:35:28 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:35:28 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:35:28 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.025s
+2026-06-25 12:35:28 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:35:30 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:35:30 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.590s
+2026-06-25 12:35:30 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:35:31 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:35:31 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.856s
+2026-06-25 12:35:31 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:35:31 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:35:31 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.156s
+2026-06-25 12:35:31 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:35:31 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:35:31 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.084s
+2026-06-25 12:35:42 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:35:43 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:35:43 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:35:43 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:35:43 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:35:43 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:35:43 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:35:54 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:35:54 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=10.806s
+2026-06-25 12:35:54 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:35:54 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:35:54 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.040s
+2026-06-25 12:35:54 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:35:55 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.115s
+2026-06-25 12:35:55 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:35:55 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.109s
+2026-06-25 12:35:55 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:35:55 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.423s
+2026-06-25 12:35:55 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:35:55 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.065s
+2026-06-25 12:35:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:35:55 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:35:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:35:55 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:35:55 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:35:55 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:35:55 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:35:55 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:35:55 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.021s
+2026-06-25 12:35:56 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:35:56 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:35:56 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.097s
+2026-06-25 12:35:56 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:35:56 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:35:56 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:35:56 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:35:56 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:35:56 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:35:56 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:35:56 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:36:00 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:36:05 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:36:05 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.885s
+2026-06-25 12:36:06 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:36:06 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:36:06 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.029s
+2026-06-25 12:36:06 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:36:07 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174472)
+2026-06-25 12:36:07 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.451s
+2026-06-25 12:36:07 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:36:07 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:36:07 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.156s
+2026-06-25 12:36:07 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:36:08 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:36:08 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.169s
+2026-06-25 12:36:08 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:36:08 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:36:08 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.048s
+2026-06-25 12:36:17 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:36:18 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:36:18 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:36:19 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:36:19 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:36:19 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:36:19 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:36:25 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:36:25 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.947s
+2026-06-25 12:36:26 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:36:26 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:36:26 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.032s
+2026-06-25 12:36:26 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:36:26 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:36:26 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.123s
+2026-06-25 12:36:26 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:36:26 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:36:26 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.262s
+2026-06-25 12:36:26 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:36:27 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.401s
+2026-06-25 12:36:27 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:36:27 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.056s
+2026-06-25 12:36:27 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:36:27 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:36:27 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:36:27 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:36:27 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:36:27 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:36:27 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:36:27 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.010s
+2026-06-25 12:36:27 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:36:27 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.109s
+2026-06-25 12:36:27 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:36:27 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:36:27 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:36:27 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:36:27 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:36:27 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:37:53 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:37:58 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:37:58 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.484s
+2026-06-25 12:37:59 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:37:59 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:37:59 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.093s
+2026-06-25 12:38:00 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:38:00 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:38:00 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.653s
+2026-06-25 12:38:00 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:38:01 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:38:01 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.130s
+2026-06-25 12:38:01 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:38:01 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:38:01 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.134s
+2026-06-25 12:38:01 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:38:01 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:38:01 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.034s
+2026-06-25 12:38:09 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:38:09 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:38:10 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:38:10 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:38:10 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:38:10 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:38:10 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:38:14 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:38:14 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=4.480s
+2026-06-25 12:38:14 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:38:14 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:38:14 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.031s
+2026-06-25 12:38:14 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:38:14 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:38:14 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.099s
+2026-06-25 12:38:14 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:38:15 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.060s
+2026-06-25 12:38:15 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:38:15 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.212s
+2026-06-25 12:38:15 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:38:15 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.048s
+2026-06-25 12:38:15 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:38:15 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:38:15 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:38:15 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:38:15 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:38:15 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:38:15 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:38:15 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.013s
+2026-06-25 12:38:15 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:38:15 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.070s
+2026-06-25 12:38:15 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:38:15 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:38:15 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:38:15 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.000s
+2026-06-25 12:38:15 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:38:15 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 12:46:14 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:46:20 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:46:20 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.999s
+2026-06-25 12:46:20 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:46:20 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:46:20 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.026s
+2026-06-25 12:46:20 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:46:20 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:46:20 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.436s
+2026-06-25 12:46:20 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:46:20 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:46:20 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.085s
+2026-06-25 12:46:20 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:46:21 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:46:21 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.070s
+2026-06-25 12:46:21 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:46:21 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:46:21 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.039s
+2026-06-25 12:46:37 | test_logger_core | INFO | hello core foundation
+2026-06-25 12:46:37 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 12:46:38 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:46:38 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:46:38 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 12:46:38 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 12:46:38 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:46:49 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 12:46:49 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=10.402s
+2026-06-25 12:46:49 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:46:49 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 12:46:49 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.038s
+2026-06-25 12:46:49 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 12:46:50 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 12:46:50 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.248s
+2026-06-25 12:46:50 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 12:46:50 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 12:46:50 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.323s
+2026-06-25 12:46:50 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:46:51 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.401s
+2026-06-25 12:46:51 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:46:51 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.037s
+2026-06-25 12:46:51 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:46:51 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:46:51 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 12:46:51 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 12:46:51 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 12:46:51 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 12:46:51 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:46:51 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.050s
+2026-06-25 12:46:51 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 12:46:51 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.357s
+2026-06-25 12:46:51 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 12:46:51 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 12:46:51 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 12:46:52 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 12:46:52 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 12:46:52 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 12:46:53 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 12:46:55 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:02:28 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:02:33 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:02:33 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.797s
+2026-06-25 13:02:34 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:02:34 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:02:34 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.033s
+2026-06-25 13:02:34 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:02:36 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:02:36 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.612s
+2026-06-25 13:02:36 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:02:37 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:02:37 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.180s
+2026-06-25 13:02:37 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:02:37 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:02:37 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.141s
+2026-06-25 13:02:37 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:02:37 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:02:37 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.061s
+2026-06-25 13:02:48 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:02:49 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:02:50 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:02:50 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:02:50 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:02:50 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:02:50 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:02:57 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:02:57 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.401s
+2026-06-25 13:02:57 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:02:57 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:02:57 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.040s
+2026-06-25 13:02:57 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:02:57 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:02:57 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.237s
+2026-06-25 13:02:57 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:02:57 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:02:57 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.074s
+2026-06-25 13:02:57 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:02:58 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.389s
+2026-06-25 13:02:58 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:02:58 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.055s
+2026-06-25 13:02:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:02:58 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:02:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:02:58 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:02:58 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:02:58 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 13:02:58 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:02:58 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.021s
+2026-06-25 13:02:58 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:02:58 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.146s
+2026-06-25 13:02:58 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:02:58 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 13:02:58 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:02:58 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:02:58 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.002s
+2026-06-25 13:03:00 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.136s file_size_bytes=None
+2026-06-25 13:03:01 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:03:10 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:03:17 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:03:17 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.839s
+2026-06-25 13:03:17 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:03:17 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:03:17 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.058s
+2026-06-25 13:03:19 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:03:19 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:03:19 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.957s
+2026-06-25 13:03:20 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:03:20 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:03:20 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.316s
+2026-06-25 13:03:20 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:03:20 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:03:20 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.250s
+2026-06-25 13:03:21 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:03:21 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:03:21 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.135s
+2026-06-25 13:03:33 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:03:33 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:03:34 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:03:34 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:03:34 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:03:34 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:03:35 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:03:44 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:03:44 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=9.186s
+2026-06-25 13:03:44 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:03:44 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:03:44 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.060s
+2026-06-25 13:03:44 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:03:44 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:03:44 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.121s
+2026-06-25 13:03:44 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:03:44 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:03:44 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.129s
+2026-06-25 13:03:45 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:03:46 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:03:46 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.914s
+2026-06-25 13:03:46 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:03:46 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:03:46 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.297s
+2026-06-25 13:03:46 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:03:46 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:03:46 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:03:47 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:03:47 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:03:47 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:03:47 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:03:47 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:03:47 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.002s
+2026-06-25 13:03:47 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:03:47 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:03:47 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.005s
+2026-06-25 13:03:47 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:03:47 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:03:47 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.410s
+2026-06-25 13:03:47 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:03:47 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:03:47 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 13:03:47 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:03:47 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:03:47 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:03:48 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.056s file_size_bytes=None
+2026-06-25 13:03:49 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:06:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:06:55 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:06:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.686s
+2026-06-25 13:06:56 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:06:56 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:06:56 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.027s
+2026-06-25 13:06:56 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:06:56 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:06:56 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.420s
+2026-06-25 13:06:56 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:06:56 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:06:56 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.182s
+2026-06-25 13:06:56 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:06:56 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:06:56 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.083s
+2026-06-25 13:06:56 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:06:56 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:06:56 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.040s
+2026-06-25 13:07:06 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:07:06 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:07:07 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:07:07 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 13:07:07 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:07:07 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 13:07:07 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:14 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:07:14 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.135s
+2026-06-25 13:07:14 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:07:14 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:07:14 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.044s
+2026-06-25 13:07:14 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:07:14 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:07:14 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.117s
+2026-06-25 13:07:14 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:07:14 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:07:14 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.091s
+2026-06-25 13:07:15 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:07:15 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.433s
+2026-06-25 13:07:15 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:15 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.058s
+2026-06-25 13:07:15 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:15 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:07:15 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:15 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:07:15 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:07:15 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 13:07:15 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:15 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.004s
+2026-06-25 13:07:15 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:07:15 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.112s
+2026-06-25 13:07:15 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:15 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 13:07:15 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:07:15 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:07:15 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:07:16 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:07:16 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:07:16 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:23 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:07:23 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.502s
+2026-06-25 13:07:23 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:07:23 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:07:23 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.031s
+2026-06-25 13:07:23 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:07:25 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:07:25 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.560s
+2026-06-25 13:07:26 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:07:26 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:07:26 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.121s
+2026-06-25 13:07:26 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:07:26 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:07:26 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.136s
+2026-06-25 13:07:26 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:26 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:07:26 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.081s
+2026-06-25 13:07:37 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:07:37 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:07:38 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:07:38 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:07:38 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:07:38 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:07:38 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:47 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:07:47 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=9.098s
+2026-06-25 13:07:47 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:07:47 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:07:47 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.029s
+2026-06-25 13:07:47 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:07:47 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:07:47 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.159s
+2026-06-25 13:07:48 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:07:48 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:07:48 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.090s
+2026-06-25 13:07:48 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:07:48 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:07:48 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.383s
+2026-06-25 13:07:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:48 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:07:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.102s
+2026-06-25 13:07:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:48 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:07:48 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.017s
+2026-06-25 13:07:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:07:48 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:07:48 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:07:50 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:07:50 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:07:50 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.002s
+2026-06-25 13:07:50 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:50 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:07:50 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.137s
+2026-06-25 13:07:50 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:07:50 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:07:50 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.155s
+2026-06-25 13:07:51 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:07:51 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:07:51 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 13:07:51 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:07:51 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:07:51 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:07:51 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.002s file_size_bytes=None
+2026-06-25 13:07:52 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:08:14 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:08:19 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:08:19 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.466s
+2026-06-25 13:08:19 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:08:19 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:08:19 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.031s
+2026-06-25 13:08:19 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:08:21 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:08:21 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.035s
+2026-06-25 13:08:21 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:08:22 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:08:22 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.264s
+2026-06-25 13:08:22 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:08:22 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:08:22 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.305s
+2026-06-25 13:08:22 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:08:23 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:08:23 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.313s
+2026-06-25 13:08:39 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:08:39 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:08:41 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:08:41 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.002s file_size_bytes=None
+2026-06-25 13:08:41 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:08:41 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:08:41 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:08:52 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:08:52 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=11.527s
+2026-06-25 13:08:53 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:08:53 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:08:53 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.066s
+2026-06-25 13:08:53 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:08:53 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:08:53 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.152s
+2026-06-25 13:08:53 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:08:53 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:08:53 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.101s
+2026-06-25 13:08:53 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:08:54 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.527s
+2026-06-25 13:08:54 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:08:54 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.094s
+2026-06-25 13:08:54 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:08:54 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:08:54 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:08:54 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.002s
+2026-06-25 13:08:54 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:08:54 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.003s
+2026-06-25 13:08:54 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:08:54 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.010s
+2026-06-25 13:08:54 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:08:54 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.174s
+2026-06-25 13:08:54 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:08:54 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.006s
+2026-06-25 13:08:54 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:08:54 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:08:54 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:08:55 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:08:55 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:17:58 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:18:11 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:18:11 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=13.251s
+2026-06-25 13:18:11 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:18:11 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:18:11 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.028s
+2026-06-25 13:18:11 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:18:12 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:18:12 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.458s
+2026-06-25 13:18:12 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:18:12 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:18:12 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.087s
+2026-06-25 13:18:12 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:18:12 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:18:12 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.063s
+2026-06-25 13:18:12 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:18:12 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:18:12 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.034s
+2026-06-25 13:18:27 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:18:27 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:18:30 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:18:30 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:18:30 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:18:30 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 13:18:30 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:18:38 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:18:38 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=7.578s
+2026-06-25 13:18:38 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:18:38 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:18:38 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.037s
+2026-06-25 13:18:38 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:18:38 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:18:38 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.244s
+2026-06-25 13:18:38 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:18:38 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:18:38 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.186s
+2026-06-25 13:18:39 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:18:39 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.445s
+2026-06-25 13:18:39 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:18:39 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.060s
+2026-06-25 13:18:39 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:18:39 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:18:39 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:18:39 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:18:39 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:18:39 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 13:18:39 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:18:39 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.009s
+2026-06-25 13:18:39 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:18:39 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.105s
+2026-06-25 13:18:39 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:18:39 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 13:18:39 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:18:39 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:18:39 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:18:40 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:18:40 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:22:53 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:22:59 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:22:59 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=6.512s
+2026-06-25 13:22:59 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:22:59 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:22:59 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.038s
+2026-06-25 13:22:59 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:23:01 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:23:01 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.847s
+2026-06-25 13:23:01 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:23:01 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:23:01 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.177s
+2026-06-25 13:23:01 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:23:02 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:23:02 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.167s
+2026-06-25 13:23:02 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:23:02 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:23:02 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.117s
+2026-06-25 13:23:25 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:23:26 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:23:27 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:23:27 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:23:27 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:23:27 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-06-25 13:23:27 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:23:33 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:23:33 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.771s
+2026-06-25 13:23:33 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:23:33 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:23:33 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.041s
+2026-06-25 13:23:33 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:23:33 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:23:33 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.104s
+2026-06-25 13:23:33 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:23:33 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:23:33 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.073s
+2026-06-25 13:23:33 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:23:34 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.430s
+2026-06-25 13:23:34 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:23:34 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.051s
+2026-06-25 13:23:34 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:23:34 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:23:34 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:23:34 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.004s
+2026-06-25 13:23:34 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:23:34 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-06-25 13:23:34 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:23:34 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.018s
+2026-06-25 13:23:34 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:23:34 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.117s
+2026-06-25 13:23:34 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:23:34 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-06-25 13:23:34 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:23:34 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:23:34 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:23:34 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.011s file_size_bytes=None
+2026-06-25 13:23:35 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-06-25 13:28:42 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:28:47 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:28:47 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=4.893s
+2026-06-25 13:28:48 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:28:48 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:28:48 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.031s
+2026-06-25 13:28:48 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:28:49 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:28:49 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.513s
+2026-06-25 13:28:49 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:28:49 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:28:49 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.188s
+2026-06-25 13:28:49 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:28:49 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:28:49 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.101s
+2026-06-25 13:28:49 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:28:50 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:28:50 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.042s
+2026-06-25 13:28:58 | test_logger_core | INFO | hello core foundation
+2026-06-25 13:28:58 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-06-25 13:28:59 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:28:59 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 13:28:59 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-06-25 13:28:59 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-06-25 13:28:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:29:05 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11901867)
+2026-06-25 13:29:05 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=5.935s
+2026-06-25 13:29:06 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:29:06 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-06-25 13:29:06 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.041s
+2026-06-25 13:29:06 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-06-25 13:29:06 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-06-25 13:29:06 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.142s
+2026-06-25 13:29:06 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-06-25 13:29:06 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-06-25 13:29:06 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.119s
+2026-06-25 13:29:06 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:29:06 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174473)
+2026-06-25 13:29:06 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.367s
+2026-06-25 13:29:06 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:29:07 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.081s
+2026-06-25 13:29:07 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:29:07 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-06-25 13:29:07 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-06-25 13:29:07 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.006s
+2026-06-25 13:29:07 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-06-25 13:29:07 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.003s
+2026-06-25 13:29:07 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:29:07 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.023s
+2026-06-25 13:29:07 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-06-25 13:29:07 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.132s
+2026-06-25 13:29:07 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-06-25 13:29:07 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.002s
+2026-06-25 13:29:07 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-06-25 13:29:07 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-06-25 13:29:07 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.008s file_size_bytes=None
+2026-06-25 13:29:07 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s

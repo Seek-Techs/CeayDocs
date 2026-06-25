@@ -1,6 +1,8 @@
-import fitz
-from io import BytesIO
 from collections import defaultdict
+from io import BytesIO
+
+import fitz
+
 from services.view_classifier import classify_pdf_views
 
 

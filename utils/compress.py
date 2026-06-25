@@ -1,8 +1,9 @@
-import subprocess
-import tempfile
-import shutil
 import os
 import platform
+import shutil
+import subprocess
+import tempfile
+
 from .compress_fallback import compress_pdf_fallback
 
 

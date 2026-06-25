@@ -1,4 +1,3 @@
-import re
 import fitz
 
 PLAN_KEYWORDS = ["plan", "floor plan", "layout"]

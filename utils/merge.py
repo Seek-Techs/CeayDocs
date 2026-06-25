@@ -1,8 +1,10 @@
-from PyPDF2 import PdfMerger
+import os
 import tempfile
 from io import BytesIO
-import os
 from pathlib import Path
+
+from PyPDF2 import PdfMerger
+
 
 def merge_pdfs(pdf_files, output_path=None):
     """

@@ -1,14 +1,10 @@
 from __future__ import annotations
 
-from typing import Optional
-
 from core.exceptions import ConversionError
 from core.logger import get_logger
 from core.telemetry import elapsed_time
-from utils.convert import pdf_to_word
-
 from services.operations.exception_mapper import map_exception_for_operation
-
+from utils.convert import pdf_to_word
 
 logger = get_logger(__name__)
 

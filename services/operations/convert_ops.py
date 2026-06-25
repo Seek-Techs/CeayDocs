@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from typing import Optional
-
 from utils.convert import pdf_to_word, word_to_pdf
 
 

@@ -1,10 +1,10 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException
-from fastapi.responses import StreamingResponse
 import io
 
-from utils.convert import pdf_to_word
+from fastapi import APIRouter, File, HTTPException, UploadFile
+from fastapi.responses import StreamingResponse
 
 from core.file_naming import generate_converted_filename
+from utils.convert import pdf_to_word
 
 router = APIRouter()
 

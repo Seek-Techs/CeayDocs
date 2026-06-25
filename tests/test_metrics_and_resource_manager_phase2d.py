@@ -1,9 +1,5 @@
 from __future__ import annotations
 
-from pathlib import Path
-
-import pytest
-
 from core.metrics import get_metrics_collector
 from core.resource_manager import ResourceManager
 

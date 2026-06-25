@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 from core.exceptions import (
-    FileValidationError,
-    UnsupportedFormatError,
-    OCRProcessingError,
+    CeayDocsError,
     CompressionError,
     ConversionError,
-    CeayDocsError,
+    FileValidationError,
+    OCRProcessingError,
+    UnsupportedFormatError,
 )
 
 

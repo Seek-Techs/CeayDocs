@@ -2,13 +2,10 @@ from __future__ import annotations
 
 from typing import Iterable
 
-from core.exceptions import ConversionError
 from core.logger import get_logger
 from core.telemetry import elapsed_time
-from services.operations.merge_ops import merge_pdfs_op
-
 from services.operations.exception_mapper import map_exception_for_operation
-
+from services.operations.merge_ops import merge_pdfs_op
 
 logger = get_logger(__name__)
 

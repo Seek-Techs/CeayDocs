@@ -1,6 +1,8 @@
 # services/rule_engine.py
-from typing import Dict, Any, List
+from typing import Any, Dict, List
+
 from services.rules import RULE_TEMPLATES
+
 
 def apply_rules(index: List[Dict[str, Any]], project_type: str) -> Dict[str, Any]:
     rules = RULE_TEMPLATES.get(project_type.upper())

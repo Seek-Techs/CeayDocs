@@ -1,6 +1,8 @@
-import fitz
 import io
+
+import fitz
 from PIL import Image
+
 
 def compress_pdf_fallback(pdf_file, dpi=120, jpeg_quality=60):
     """

@@ -74,19 +74,19 @@ def _assert_common_logs(caplog, operation: str, adapter_start_marker: str, adapt
 )
 def test_logging_assertions_happy_paths(caplog, monkeypatch, op, start_marker, completed_marker, func, arg):
     # Lowering the logging noise: capture everything at INFO.
-    logger = get_logger("ceaydocs")
+    get_logger("ceaydocs")
     caplog.set_level("INFO", logger="ceaydocs")
 
     # Lazy imports so test collection is cheap.
     from pathlib import Path
-    from docx import Document
 
-    from services.operations.pdf_to_word_adapter import pdf_to_word_adapter
-    from services.operations.word_to_pdf_adapter import word_to_pdf_adapter
-    from services.operations.merge_pdf_adapter import merge_pdfs_adapter
-    from services.operations.split_pdf_adapter import split_pdf_adapter
+    from docx import Document
     from services.operations.compress_pdf_adapter import compress_pdf_adapter
     from services.operations.extract_text_adapter import extract_text_adapter
+    from services.operations.merge_pdf_adapter import merge_pdfs_adapter
+    from services.operations.pdf_to_word_adapter import pdf_to_word_adapter
+    from services.operations.split_pdf_adapter import split_pdf_adapter
+    from services.operations.word_to_pdf_adapter import word_to_pdf_adapter
 
     base = Path(__file__).resolve().parent / "sample.pdf"
     if not base.exists():
@@ -152,8 +152,8 @@ def test_failure_path_exception_mapping_missing_file(monkeypatch, caplog):
 
 
 def test_failure_path_exception_mapping_unsupported_format(monkeypatch, caplog):
-    from services.operations.pdf_to_word_adapter import pdf_to_word_adapter
     import services.operations.pdf_to_word_adapter as adapter_mod
+    from services.operations.pdf_to_word_adapter import pdf_to_word_adapter
 
     def _boom(_: bytes):
         raise ValueError("Unsupported file extension: .xyz")
@@ -205,8 +205,8 @@ def test_failure_path_exception_mapping_ghostscript_failure(monkeypatch):
 
 
 def test_failure_path_exception_mapping_ocr_failure(monkeypatch):
-    from services.operations.extract_text_adapter import extract_text_adapter
     import services.operations.extract_text_adapter as adapter_mod
+    from services.operations.extract_text_adapter import extract_text_adapter
 
     def _boom(_: bytes):
         raise RuntimeError("tesseract: failed to initialize OCR")
@@ -220,8 +220,8 @@ def test_failure_path_exception_mapping_ocr_failure(monkeypatch):
 
 
 def test_failure_path_exception_mapping_libreoffice_failure(monkeypatch):
-    from services.operations.word_to_pdf_adapter import word_to_pdf_adapter
     import services.operations.word_to_pdf_adapter as adapter_mod
+    from services.operations.word_to_pdf_adapter import word_to_pdf_adapter
 
     def _boom(_: bytes):
         raise RuntimeError("soffice failed with exit status 1")

@@ -1,0 +1,8 @@
+[bandit]
+exclude_dirs =
+  .venv
+  venv
+  tests
+  docx
+  logs
+

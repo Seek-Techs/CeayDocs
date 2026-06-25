@@ -5,7 +5,6 @@ from typing import Iterable
 from utils.merge import merge_pdfs
 
 
-
 class _BytesFile:
     def __init__(self, data: bytes):
         self._data = data

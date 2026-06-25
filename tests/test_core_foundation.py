@@ -1,15 +1,14 @@
 import logging
-import os
 from pathlib import Path
 
-from core.logger import get_logger
 from core.exceptions import (
-    ConversionError,
     CompressionError,
+    ConversionError,
     FileValidationError,
-    UnsupportedFormatError,
     OCRProcessingError,
+    UnsupportedFormatError,
 )
+from core.logger import get_logger
 from core.telemetry import elapsed_time
 
 

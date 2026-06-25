@@ -1,8 +1,9 @@
-from fastapi import APIRouter, UploadFile, File
-from fastapi.responses import StreamingResponse
 import io
 
-from utils.images import pdf_to_images, images_to_pdf
+from fastapi import APIRouter, File, UploadFile
+from fastapi.responses import StreamingResponse
+
+from utils.images import images_to_pdf, pdf_to_images
 
 router = APIRouter()
 

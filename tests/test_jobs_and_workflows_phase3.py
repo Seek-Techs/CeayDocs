@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+from models.job import Job, JobStatus
 from models.operation_request import OperationRequest
 from models.operation_types import OperationType
-from models.job import Job, JobStatus
 from services.workflow import make_single_operation_workflow
 
 

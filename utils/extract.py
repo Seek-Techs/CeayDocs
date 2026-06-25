@@ -1,6 +1,7 @@
-from pdfminer.high_level import extract_text as pdfminer_extract_text
 import tempfile
 from pathlib import Path
+
+from pdfminer.high_level import extract_text as pdfminer_extract_text
 
 
 def extract_text_from_pdf(pdf_bytes: bytes) -> str:

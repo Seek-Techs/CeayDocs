@@ -1,7 +1,9 @@
-from utils.extract import extract_text
-from PyPDF2 import PdfWriter
-from pathlib import Path
 import io
+
+from PyPDF2 import PdfWriter
+
+from utils.extract import extract_text
+
 
 def test_extract_text(tmp_path):
     # Create small text PDF

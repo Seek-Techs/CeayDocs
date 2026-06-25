@@ -1,7 +1,7 @@
 # services/drawing_index.py
-from typing import List, Dict, Any, Tuple
-import io
 import csv
+import io
+from typing import Any, Dict, List
 
 # Thresholds and rules (tweakable)
 CONFIDENCE_THRESHOLD = 0.6

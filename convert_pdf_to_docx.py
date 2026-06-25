@@ -1,9 +1,10 @@
-from pdf2docx import Converter
-import os
-from pathlib import Path
 import argparse
-from typing import Optional
+import os
 import sys
+from pathlib import Path
+from typing import Optional
+
+from pdf2docx import Converter
 
 # Configuration
 BASE_DIR = Path(__file__).parent
@@ -49,9 +50,9 @@ def main(pdf_input: str = str(DEFAULT_PDF_DIR / DEFAULT_PDF_FILE),
     """Main function to handle conversion with command-line arguments."""
     if executable:
         create_executable()
-    
+
     pdf_path = Path(pdf_input)
-    
+
     if batch and pdf_path.is_dir():
         convert_multiple_pdfs(pdf_path, Path(output).parent)
     elif pdf_path.is_file():
@@ -67,6 +68,6 @@ if __name__ == "__main__":
     parser.add_argument("--end", type=int, help="Ending page number (inclusive, None for all)")
     parser.add_argument("--batch", action="store_true", help="Process all PDFs in a directory")
     parser.add_argument("--executable", action="store_true", help="Get instructions to create a standalone executable")
-    
+
     args = parser.parse_args()
     main(args.input, args.output, args.start, args.end, args.batch, args.executable)

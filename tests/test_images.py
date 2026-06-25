@@ -1,9 +1,11 @@
-from utils.images import pdf_to_images, images_to_pdf
-from PyPDF2 import PdfWriter
-from pathlib import Path
-from PIL import Image
 import io
-import os
+
+from PIL import Image
+from PyPDF2 import PdfWriter
+
+from utils.images import images_to_pdf, pdf_to_images
+
+
 def test_pdf_to_images(tmp_path):
     pdf_path = tmp_path / "pages.pdf"
 
