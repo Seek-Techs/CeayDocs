@@ -1,0 +1,897 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.0.3, pluggy-1.6.0 -- C:\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Admin\Documents\Python project\2026\ceaydocs
+configfile: pytest.ini
+plugins: anyio-4.13.0, Faker-40.15.0, cov-7.1.0, django-4.12.0
+collecting ... collected 16 items
+
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_op_success PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_op_propagates_exception FAILED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_word_to_pdf_op_success PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_word_to_pdf_op_propagates_exception FAILED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_images_to_pdf_op_success PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_images_op_success PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_service_execute_empty_bytes PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_service_execute_none_from_util FAILED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_service_execute_propagates_util_exception FAILED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_images_to_pdf_adapter_success 2026-06-25 16:59:20 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-06-25 16:59:20 | services.operations.images_to_pdf_adapter | INFO | Completed images_to_pdf (out_bytes=3)
+2026-06-25 16:59:20 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.002s
+PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_images_to_pdf_adapter_maps_exception 2026-06-25 16:59:20 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-06-25 16:59:20 | services.operations.images_to_pdf_adapter | ERROR | images_to_pdf failed (mapped=_Mapped original=ValueError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\images_to_pdf_adapter.py", line 17, in images_to_pdf_adapter
+    out = images_to_pdf_op(image_bytes_list)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 154, in <lambda>
+    monkeypatch.setattr("services.operations.images_to_pdf_adapter.images_to_pdf_op", lambda _: (_ for _ in ()).throw(ValueError("bad")))
+                                                                                                ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 154, in <genexpr>
+    monkeypatch.setattr("services.operations.images_to_pdf_adapter.images_to_pdf_op", lambda _: (_ for _ in ()).throw(ValueError("bad")))
+ValueError: bad
+2026-06-25 16:59:20 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.004s
+PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_images_adapter_zip_success 2026-06-25 16:59:20 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-06-25 16:59:20 | services.operations.pdf_to_images_adapter | INFO | Completed pdf_to_images (zip_bytes=3)
+2026-06-25 16:59:20 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.001s
+PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_images_adapter_zip_maps_exception 2026-06-25 16:59:20 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-06-25 16:59:20 | services.operations.pdf_to_images_adapter | INFO | Completed pdf_to_images (zip_bytes=3)
+2026-06-25 16:59:20 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.001s
+FAILED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_classify_pdf_scanned_branch PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_classify_pdf_vector_branch PASSED
+tests/test_phase4b_coverage_remediation_ops_classify.py::test_classify_pdf_hybrid_else_branch PASSED
+
+================================== FAILURES ===================================
+__________________ test_pdf_to_word_op_propagates_exception ___________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B58374D010>
+
+    def test_pdf_to_word_op_propagates_exception(monkeypatch):
+        from services.operations.convert_ops import pdf_to_word_op
+    
+        def _fake_pdf_to_word(_: bytes) -> bytes:
+            raise ValueError("bad")
+    
+        monkeypatch.setattr("utils.convert.pdf_to_word", _fake_pdf_to_word)
+>       with pytest.raises(ValueError, match="bad"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\test_phase4b_coverage_remediation_ops_classify.py:60: Failed
+__________________ test_word_to_pdf_op_propagates_exception ___________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B583437BD0>
+
+    def test_word_to_pdf_op_propagates_exception(monkeypatch):
+        from services.operations.convert_ops import word_to_pdf_op
+    
+        def _fake_word_to_pdf(_: bytes) -> bytes:
+            raise OSError("boom")
+    
+        monkeypatch.setattr("utils.convert.word_to_pdf", _fake_word_to_pdf)
+>       with pytest.raises(OSError, match="boom"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+tests\test_phase4b_coverage_remediation_ops_classify.py:82: Failed
+_______________ test_pdf_to_word_service_execute_none_from_util _______________
+
+self = Document('C:\Users\Admin\AppData\Local\Temp\tmp56muxq1h.pdf')
+filename = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmp56muxq1h.pdf'
+stream = None, filetype = None, rect = None, width = 0, height = 0
+fontsize = 11
+
+    def __init__(self, filename=None, stream=None, filetype=None, rect=None, width=0, height=0, fontsize=11):
+        """Creates a document. Use 'open' as a synonym.
+    
+        Notes:
+            Basic usages:
+            open() - new PDF document
+            open(filename) - string or pathlib.Path, must have supported
+                    file extension.
+            open(type, buffer) - type: valid extension, buffer: bytes object.
+            open(stream=buffer, filetype=type) - keyword version of previous.
+            open(filename, fileype=type) - filename with unrecognized extension.
+            rect, width, height, fontsize: layout reflowable document
+            on open (e.g. EPUB). Ignored if n/a.
+        """
+        # We temporarily set JM_mupdf_show_errors=0 while we are constructing,
+        # then restore its original value in a `finally:` block.
+        #
+        global JM_mupdf_show_errors
+        JM_mupdf_show_errors_old = JM_mupdf_show_errors
+        JM_mupdf_show_errors = 0
+    
+        try:
+            self.is_closed    = False
+            self.is_encrypted = False
+            self.is_encrypted = False
+            self.metadata    = None
+            self.FontInfos   = []
+            self.Graftmaps   = {}
+            self.ShownPages  = {}
+            self.InsertedImages  = {}
+            self._page_refs  = weakref.WeakValueDictionary()
+            if isinstance(filename, mupdf.PdfDocument):
+                pdf_document = filename
+                self.this = pdf_document
+                self.this_is_pdf = True
+                return
+    
+            w = width
+            h = height
+            r = JM_rect_from_py(rect)
+            if not mupdf.fz_is_infinite_rect(r):
+                w = r.x1 - r.x0
+                h = r.y1 - r.y0
+    
+            self._name = filename
+            self.stream = stream
+    
+            if stream is not None:
+                if filename is not None and filetype is None:
+                    # 2025-05-06: Use <filename> as the filetype. This is
+                    # reversing precedence - we used to use <filename> if both
+                    # were set.
+                    filetype = filename
+                if isinstance(stream, (bytes, memoryview)):
+                    pass
+                elif isinstance(stream, bytearray):
+                    stream = bytes(stream)
+                elif isinstance(stream, io.BytesIO):
+                    stream = stream.getvalue()
+                else:
+                    raise TypeError(f"bad stream: {type(stream)=}.")
+                self.stream = stream
+    
+                assert isinstance(stream, (bytes, memoryview))
+                if len(stream) == 0:
+                    # MuPDF raise an exception for this but also generates
+                    # warnings, which is not very helpful for us. So instead we
+                    # raise a specific exception.
+                    raise EmptyFileError('Cannot open empty stream.')
+    
+                stream2 = mupdf.fz_open_memory(mupdf.python_buffer_data(stream), len(stream))
+                try:
+                    doc = mupdf.fz_open_document_with_stream(filetype if filetype else '', stream2)
+                except Exception as e:
+                    if g_exceptions_verbose > 1:    exception_info()
+                    raise FileDataError('Failed to open stream') from e
+    
+            elif filename:
+                assert not stream
+                if isinstance(filename, str):
+                    pass
+                elif hasattr(filename, "absolute"):
+                    filename = str(filename)
+                elif hasattr(filename, "name"):
+                    filename = filename.name
+                else:
+                    raise TypeError(f"bad filename: {type(filename)=} {filename=}.")
+                self._name = filename
+    
+                # Generate our own specific exceptions. This avoids MuPDF
+                # generating warnings etc.
+                if not os.path.exists(filename):
+                    raise FileNotFoundError(f"no such file: '{filename}'")
+                elif not os.path.isfile(filename):
+                    raise FileDataError(f"'{filename}' is no file")
+                elif os.path.getsize(filename) == 0:
+                    raise EmptyFileError(f'Cannot open empty file: {filename=}.')
+    
+                if filetype:
+                    # Override the type implied by <filename>. MuPDF does not
+                    # have a way to do this directly so we open via a stream.
+                    try:
+                        fz_stream = mupdf.fz_open_file(filename)
+                        doc = mupdf.fz_open_document_with_stream(filetype, fz_stream)
+                    except Exception as e:
+                        if g_exceptions_verbose > 1:    exception_info()
+                        raise FileDataError(f'Failed to open file {filename!r} as type {filetype!r}.') from e
+                else:
+                    try:
+>                       doc = mupdf.fz_open_document(filename)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py:3023: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+filename = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmp56muxq1h.pdf'
+
+    def fz_open_document(filename):
+        r"""
+        Class-aware wrapper for `::fz_open_document()`.
+        	Open a document file and read its basic structure so pages and
+        	objects can be located. MuPDF will try to repair broken
+        	documents (without actually changing the file contents).
+    
+        	The returned fz_document is used when calling most other
+        	document related functions.
+    
+        	filename: a path to a file as it would be given to open(2).
+        """
+>       return _mupdf.fz_open_document(filename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       pymupdf.mupdf.FzErrorFormat: code=7: no objects found
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pymupdf\mupdf.py:49158: FzErrorFormat
+
+The above exception was the direct cause of the following exception:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B58BF6BA70>
+
+    def test_pdf_to_word_service_execute_none_from_util(monkeypatch):
+        from services.pdf_to_word import PdfToWordService
+    
+        monkeypatch.setattr("utils.convert.pdf_to_word", lambda _: None)
+    
+        svc = PdfToWordService()
+        with pytest.raises(RuntimeError, match="Conversion returned no output"):
+>           svc.execute(b"in")
+
+tests\test_phase4b_coverage_remediation_ops_classify.py:123: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <services.pdf_to_word.PdfToWordService object at 0x000001B58C05C050>
+input_bytes = b'in'
+
+    def execute(self, input_bytes: bytes) -> bytes:
+        if not input_bytes:
+            raise ValueError("No input bytes provided")
+    
+        try:
+>           result = util_pdf_to_word(input_bytes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+services\pdf_to_word.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pdf = b'in', output = None
+
+    def pdf_to_word(pdf: bytes | Path | str, output: Path | str | None = None):
+        """Convert PDF -> DOCX.
+    
+        Backwards-compatible with existing repo/test expectations:
+        - pdf_to_word(pdf_path, output_path) -> True
+        - pdf_to_word(pdf_bytes) -> docx_bytes
+        """
+        # Byte API
+        if isinstance(pdf, (bytes, bytearray)) and output is None:
+>           return _pdf_to_word_bytes(bytes(pdf))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+utils\convert.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pdf_bytes = b'in'
+
+    def _pdf_to_word_bytes(pdf_bytes: bytes) -> bytes:
+        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp_pdf:
+            tmp_pdf.write(pdf_bytes)
+            pdf_path = tmp_pdf.name
+    
+        docx_path = pdf_path.replace(".pdf", ".docx")
+    
+        try:
+>           cv = Converter(pdf_path)
+                 ^^^^^^^^^^^^^^^^^^^
+
+utils\convert.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <pdf2docx.converter.Converter object at 0x000001B58BFD8C20>
+pdf_file = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmp56muxq1h.pdf'
+password = None, stream = None
+
+    def __init__(
+        self, pdf_file: str = None, password: str = None, stream: bytes = None
+    ):
+        '''Initialize fitz object with given pdf file path.
+    
+        Args:
+            pdf_file (str): pdf file path.
+            stream   (bytes): pdf file in memory.
+            password (str): Password for encrypted pdf. Default to None if not encrypted.
+        '''
+        # fitz object
+        self.filename_pdf = pdf_file
+        self.password = str(password or "")
+    
+        if not pdf_file and not stream:
+            raise ValueError("Either pdf_file or stream must be given.")
+    
+        if stream:
+            self._fitz_doc = fitz.Document(stream=stream)
+    
+        else:
+>           self._fitz_doc = fitz.Document(pdf_file)
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pdf2docx\converter.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Document('C:\Users\Admin\AppData\Local\Temp\tmp56muxq1h.pdf')
+filename = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmp56muxq1h.pdf'
+stream = None, filetype = None, rect = None, width = 0, height = 0
+fontsize = 11
+
+    def __init__(self, filename=None, stream=None, filetype=None, rect=None, width=0, height=0, fontsize=11):
+        """Creates a document. Use 'open' as a synonym.
+    
+        Notes:
+            Basic usages:
+            open() - new PDF document
+            open(filename) - string or pathlib.Path, must have supported
+                    file extension.
+            open(type, buffer) - type: valid extension, buffer: bytes object.
+            open(stream=buffer, filetype=type) - keyword version of previous.
+            open(filename, fileype=type) - filename with unrecognized extension.
+            rect, width, height, fontsize: layout reflowable document
+            on open (e.g. EPUB). Ignored if n/a.
+        """
+        # We temporarily set JM_mupdf_show_errors=0 while we are constructing,
+        # then restore its original value in a `finally:` block.
+        #
+        global JM_mupdf_show_errors
+        JM_mupdf_show_errors_old = JM_mupdf_show_errors
+        JM_mupdf_show_errors = 0
+    
+        try:
+            self.is_closed    = False
+            self.is_encrypted = False
+            self.is_encrypted = False
+            self.metadata    = None
+            self.FontInfos   = []
+            self.Graftmaps   = {}
+            self.ShownPages  = {}
+            self.InsertedImages  = {}
+            self._page_refs  = weakref.WeakValueDictionary()
+            if isinstance(filename, mupdf.PdfDocument):
+                pdf_document = filename
+                self.this = pdf_document
+                self.this_is_pdf = True
+                return
+    
+            w = width
+            h = height
+            r = JM_rect_from_py(rect)
+            if not mupdf.fz_is_infinite_rect(r):
+                w = r.x1 - r.x0
+                h = r.y1 - r.y0
+    
+            self._name = filename
+            self.stream = stream
+    
+            if stream is not None:
+                if filename is not None and filetype is None:
+                    # 2025-05-06: Use <filename> as the filetype. This is
+                    # reversing precedence - we used to use <filename> if both
+                    # were set.
+                    filetype = filename
+                if isinstance(stream, (bytes, memoryview)):
+                    pass
+                elif isinstance(stream, bytearray):
+                    stream = bytes(stream)
+                elif isinstance(stream, io.BytesIO):
+                    stream = stream.getvalue()
+                else:
+                    raise TypeError(f"bad stream: {type(stream)=}.")
+                self.stream = stream
+    
+                assert isinstance(stream, (bytes, memoryview))
+                if len(stream) == 0:
+                    # MuPDF raise an exception for this but also generates
+                    # warnings, which is not very helpful for us. So instead we
+                    # raise a specific exception.
+                    raise EmptyFileError('Cannot open empty stream.')
+    
+                stream2 = mupdf.fz_open_memory(mupdf.python_buffer_data(stream), len(stream))
+                try:
+                    doc = mupdf.fz_open_document_with_stream(filetype if filetype else '', stream2)
+                except Exception as e:
+                    if g_exceptions_verbose > 1:    exception_info()
+                    raise FileDataError('Failed to open stream') from e
+    
+            elif filename:
+                assert not stream
+                if isinstance(filename, str):
+                    pass
+                elif hasattr(filename, "absolute"):
+                    filename = str(filename)
+                elif hasattr(filename, "name"):
+                    filename = filename.name
+                else:
+                    raise TypeError(f"bad filename: {type(filename)=} {filename=}.")
+                self._name = filename
+    
+                # Generate our own specific exceptions. This avoids MuPDF
+                # generating warnings etc.
+                if not os.path.exists(filename):
+                    raise FileNotFoundError(f"no such file: '{filename}'")
+                elif not os.path.isfile(filename):
+                    raise FileDataError(f"'{filename}' is no file")
+                elif os.path.getsize(filename) == 0:
+                    raise EmptyFileError(f'Cannot open empty file: {filename=}.')
+    
+                if filetype:
+                    # Override the type implied by <filename>. MuPDF does not
+                    # have a way to do this directly so we open via a stream.
+                    try:
+                        fz_stream = mupdf.fz_open_file(filename)
+                        doc = mupdf.fz_open_document_with_stream(filetype, fz_stream)
+                    except Exception as e:
+                        if g_exceptions_verbose > 1:    exception_info()
+                        raise FileDataError(f'Failed to open file {filename!r} as type {filetype!r}.') from e
+                else:
+                    try:
+                        doc = mupdf.fz_open_document(filename)
+                    except Exception as e:
+                        if g_exceptions_verbose > 1:    exception_info()
+>                       raise FileDataError(f'Failed to open file {filename!r}.') from e
+E                       pymupdf.FileDataError: Failed to open file 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmp56muxq1h.pdf'.
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py:3026: FileDataError
+
+During handling of the above exception, another exception occurred:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B58BF6BA70>
+
+    def test_pdf_to_word_service_execute_none_from_util(monkeypatch):
+        from services.pdf_to_word import PdfToWordService
+    
+        monkeypatch.setattr("utils.convert.pdf_to_word", lambda _: None)
+    
+        svc = PdfToWordService()
+>       with pytest.raises(RuntimeError, match="Conversion returned no output"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'Conversion returned no output'
+E         Actual message: "Failed to open file 'C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\tmp56muxq1h.pdf'."
+
+tests\test_phase4b_coverage_remediation_ops_classify.py:122: AssertionError
+------------------------------ Captured log call ------------------------------
+ERROR    services.pdf_to_word:pdf_to_word.py:29 PdfToWordService failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py", line 3023, in __init__
+    doc = mupdf.fz_open_document(filename)
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pymupdf\mupdf.py", line 49158, in fz_open_document
+    return _mupdf.fz_open_document(filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+pymupdf.mupdf.FzErrorFormat: code=7: no objects found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\pdf_to_word.py", line 24, in execute
+    result = util_pdf_to_word(input_bytes)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\utils\convert.py", line 19, in pdf_to_word
+    return _pdf_to_word_bytes(bytes(pdf))
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\utils\convert.py", line 47, in _pdf_to_word_bytes
+    cv = Converter(pdf_path)
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pdf2docx\converter.py", line 59, in __init__
+    self._fitz_doc = fitz.Document(pdf_file)
+                     ~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py", line 3026, in __init__
+    raise FileDataError(f'Failed to open file {filename!r}.') from e
+pymupdf.FileDataError: Failed to open file 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmp56muxq1h.pdf'.
+_________ test_pdf_to_word_service_execute_propagates_util_exception __________
+
+self = Document('C:\Users\Admin\AppData\Local\Temp\tmpo2qbh47m.pdf')
+filename = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'
+stream = None, filetype = None, rect = None, width = 0, height = 0
+fontsize = 11
+
+    def __init__(self, filename=None, stream=None, filetype=None, rect=None, width=0, height=0, fontsize=11):
+        """Creates a document. Use 'open' as a synonym.
+    
+        Notes:
+            Basic usages:
+            open() - new PDF document
+            open(filename) - string or pathlib.Path, must have supported
+                    file extension.
+            open(type, buffer) - type: valid extension, buffer: bytes object.
+            open(stream=buffer, filetype=type) - keyword version of previous.
+            open(filename, fileype=type) - filename with unrecognized extension.
+            rect, width, height, fontsize: layout reflowable document
+            on open (e.g. EPUB). Ignored if n/a.
+        """
+        # We temporarily set JM_mupdf_show_errors=0 while we are constructing,
+        # then restore its original value in a `finally:` block.
+        #
+        global JM_mupdf_show_errors
+        JM_mupdf_show_errors_old = JM_mupdf_show_errors
+        JM_mupdf_show_errors = 0
+    
+        try:
+            self.is_closed    = False
+            self.is_encrypted = False
+            self.is_encrypted = False
+            self.metadata    = None
+            self.FontInfos   = []
+            self.Graftmaps   = {}
+            self.ShownPages  = {}
+            self.InsertedImages  = {}
+            self._page_refs  = weakref.WeakValueDictionary()
+            if isinstance(filename, mupdf.PdfDocument):
+                pdf_document = filename
+                self.this = pdf_document
+                self.this_is_pdf = True
+                return
+    
+            w = width
+            h = height
+            r = JM_rect_from_py(rect)
+            if not mupdf.fz_is_infinite_rect(r):
+                w = r.x1 - r.x0
+                h = r.y1 - r.y0
+    
+            self._name = filename
+            self.stream = stream
+    
+            if stream is not None:
+                if filename is not None and filetype is None:
+                    # 2025-05-06: Use <filename> as the filetype. This is
+                    # reversing precedence - we used to use <filename> if both
+                    # were set.
+                    filetype = filename
+                if isinstance(stream, (bytes, memoryview)):
+                    pass
+                elif isinstance(stream, bytearray):
+                    stream = bytes(stream)
+                elif isinstance(stream, io.BytesIO):
+                    stream = stream.getvalue()
+                else:
+                    raise TypeError(f"bad stream: {type(stream)=}.")
+                self.stream = stream
+    
+                assert isinstance(stream, (bytes, memoryview))
+                if len(stream) == 0:
+                    # MuPDF raise an exception for this but also generates
+                    # warnings, which is not very helpful for us. So instead we
+                    # raise a specific exception.
+                    raise EmptyFileError('Cannot open empty stream.')
+    
+                stream2 = mupdf.fz_open_memory(mupdf.python_buffer_data(stream), len(stream))
+                try:
+                    doc = mupdf.fz_open_document_with_stream(filetype if filetype else '', stream2)
+                except Exception as e:
+                    if g_exceptions_verbose > 1:    exception_info()
+                    raise FileDataError('Failed to open stream') from e
+    
+            elif filename:
+                assert not stream
+                if isinstance(filename, str):
+                    pass
+                elif hasattr(filename, "absolute"):
+                    filename = str(filename)
+                elif hasattr(filename, "name"):
+                    filename = filename.name
+                else:
+                    raise TypeError(f"bad filename: {type(filename)=} {filename=}.")
+                self._name = filename
+    
+                # Generate our own specific exceptions. This avoids MuPDF
+                # generating warnings etc.
+                if not os.path.exists(filename):
+                    raise FileNotFoundError(f"no such file: '{filename}'")
+                elif not os.path.isfile(filename):
+                    raise FileDataError(f"'{filename}' is no file")
+                elif os.path.getsize(filename) == 0:
+                    raise EmptyFileError(f'Cannot open empty file: {filename=}.')
+    
+                if filetype:
+                    # Override the type implied by <filename>. MuPDF does not
+                    # have a way to do this directly so we open via a stream.
+                    try:
+                        fz_stream = mupdf.fz_open_file(filename)
+                        doc = mupdf.fz_open_document_with_stream(filetype, fz_stream)
+                    except Exception as e:
+                        if g_exceptions_verbose > 1:    exception_info()
+                        raise FileDataError(f'Failed to open file {filename!r} as type {filetype!r}.') from e
+                else:
+                    try:
+>                       doc = mupdf.fz_open_document(filename)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py:3023: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+filename = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'
+
+    def fz_open_document(filename):
+        r"""
+        Class-aware wrapper for `::fz_open_document()`.
+        	Open a document file and read its basic structure so pages and
+        	objects can be located. MuPDF will try to repair broken
+        	documents (without actually changing the file contents).
+    
+        	The returned fz_document is used when calling most other
+        	document related functions.
+    
+        	filename: a path to a file as it would be given to open(2).
+        """
+>       return _mupdf.fz_open_document(filename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       pymupdf.mupdf.FzErrorFormat: code=7: no objects found
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pymupdf\mupdf.py:49158: FzErrorFormat
+
+The above exception was the direct cause of the following exception:
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B58C083150>
+
+    def test_pdf_to_word_service_execute_propagates_util_exception(monkeypatch):
+        from services.pdf_to_word import PdfToWordService
+    
+        def _boom(_: bytes) -> bytes:
+            raise OSError("util fail")
+    
+        monkeypatch.setattr("utils.convert.pdf_to_word", _boom)
+    
+        svc = PdfToWordService()
+        with pytest.raises(OSError, match="util fail"):
+>           svc.execute(b"in")
+
+tests\test_phase4b_coverage_remediation_ops_classify.py:136: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <services.pdf_to_word.PdfToWordService object at 0x000001B58C05CA50>
+input_bytes = b'in'
+
+    def execute(self, input_bytes: bytes) -> bytes:
+        if not input_bytes:
+            raise ValueError("No input bytes provided")
+    
+        try:
+>           result = util_pdf_to_word(input_bytes)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+services\pdf_to_word.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pdf = b'in', output = None
+
+    def pdf_to_word(pdf: bytes | Path | str, output: Path | str | None = None):
+        """Convert PDF -> DOCX.
+    
+        Backwards-compatible with existing repo/test expectations:
+        - pdf_to_word(pdf_path, output_path) -> True
+        - pdf_to_word(pdf_bytes) -> docx_bytes
+        """
+        # Byte API
+        if isinstance(pdf, (bytes, bytearray)) and output is None:
+>           return _pdf_to_word_bytes(bytes(pdf))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+utils\convert.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+pdf_bytes = b'in'
+
+    def _pdf_to_word_bytes(pdf_bytes: bytes) -> bytes:
+        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp_pdf:
+            tmp_pdf.write(pdf_bytes)
+            pdf_path = tmp_pdf.name
+    
+        docx_path = pdf_path.replace(".pdf", ".docx")
+    
+        try:
+>           cv = Converter(pdf_path)
+                 ^^^^^^^^^^^^^^^^^^^
+
+utils\convert.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <pdf2docx.converter.Converter object at 0x000001B58C05DA90>
+pdf_file = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'
+password = None, stream = None
+
+    def __init__(
+        self, pdf_file: str = None, password: str = None, stream: bytes = None
+    ):
+        '''Initialize fitz object with given pdf file path.
+    
+        Args:
+            pdf_file (str): pdf file path.
+            stream   (bytes): pdf file in memory.
+            password (str): Password for encrypted pdf. Default to None if not encrypted.
+        '''
+        # fitz object
+        self.filename_pdf = pdf_file
+        self.password = str(password or "")
+    
+        if not pdf_file and not stream:
+            raise ValueError("Either pdf_file or stream must be given.")
+    
+        if stream:
+            self._fitz_doc = fitz.Document(stream=stream)
+    
+        else:
+>           self._fitz_doc = fitz.Document(pdf_file)
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pdf2docx\converter.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Document('C:\Users\Admin\AppData\Local\Temp\tmpo2qbh47m.pdf')
+filename = 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'
+stream = None, filetype = None, rect = None, width = 0, height = 0
+fontsize = 11
+
+    def __init__(self, filename=None, stream=None, filetype=None, rect=None, width=0, height=0, fontsize=11):
+        """Creates a document. Use 'open' as a synonym.
+    
+        Notes:
+            Basic usages:
+            open() - new PDF document
+            open(filename) - string or pathlib.Path, must have supported
+                    file extension.
+            open(type, buffer) - type: valid extension, buffer: bytes object.
+            open(stream=buffer, filetype=type) - keyword version of previous.
+            open(filename, fileype=type) - filename with unrecognized extension.
+            rect, width, height, fontsize: layout reflowable document
+            on open (e.g. EPUB). Ignored if n/a.
+        """
+        # We temporarily set JM_mupdf_show_errors=0 while we are constructing,
+        # then restore its original value in a `finally:` block.
+        #
+        global JM_mupdf_show_errors
+        JM_mupdf_show_errors_old = JM_mupdf_show_errors
+        JM_mupdf_show_errors = 0
+    
+        try:
+            self.is_closed    = False
+            self.is_encrypted = False
+            self.is_encrypted = False
+            self.metadata    = None
+            self.FontInfos   = []
+            self.Graftmaps   = {}
+            self.ShownPages  = {}
+            self.InsertedImages  = {}
+            self._page_refs  = weakref.WeakValueDictionary()
+            if isinstance(filename, mupdf.PdfDocument):
+                pdf_document = filename
+                self.this = pdf_document
+                self.this_is_pdf = True
+                return
+    
+            w = width
+            h = height
+            r = JM_rect_from_py(rect)
+            if not mupdf.fz_is_infinite_rect(r):
+                w = r.x1 - r.x0
+                h = r.y1 - r.y0
+    
+            self._name = filename
+            self.stream = stream
+    
+            if stream is not None:
+                if filename is not None and filetype is None:
+                    # 2025-05-06: Use <filename> as the filetype. This is
+                    # reversing precedence - we used to use <filename> if both
+                    # were set.
+                    filetype = filename
+                if isinstance(stream, (bytes, memoryview)):
+                    pass
+                elif isinstance(stream, bytearray):
+                    stream = bytes(stream)
+                elif isinstance(stream, io.BytesIO):
+                    stream = stream.getvalue()
+                else:
+                    raise TypeError(f"bad stream: {type(stream)=}.")
+                self.stream = stream
+    
+                assert isinstance(stream, (bytes, memoryview))
+                if len(stream) == 0:
+                    # MuPDF raise an exception for this but also generates
+                    # warnings, which is not very helpful for us. So instead we
+                    # raise a specific exception.
+                    raise EmptyFileError('Cannot open empty stream.')
+    
+                stream2 = mupdf.fz_open_memory(mupdf.python_buffer_data(stream), len(stream))
+                try:
+                    doc = mupdf.fz_open_document_with_stream(filetype if filetype else '', stream2)
+                except Exception as e:
+                    if g_exceptions_verbose > 1:    exception_info()
+                    raise FileDataError('Failed to open stream') from e
+    
+            elif filename:
+                assert not stream
+                if isinstance(filename, str):
+                    pass
+                elif hasattr(filename, "absolute"):
+                    filename = str(filename)
+                elif hasattr(filename, "name"):
+                    filename = filename.name
+                else:
+                    raise TypeError(f"bad filename: {type(filename)=} {filename=}.")
+                self._name = filename
+    
+                # Generate our own specific exceptions. This avoids MuPDF
+                # generating warnings etc.
+                if not os.path.exists(filename):
+                    raise FileNotFoundError(f"no such file: '{filename}'")
+                elif not os.path.isfile(filename):
+                    raise FileDataError(f"'{filename}' is no file")
+                elif os.path.getsize(filename) == 0:
+                    raise EmptyFileError(f'Cannot open empty file: {filename=}.')
+    
+                if filetype:
+                    # Override the type implied by <filename>. MuPDF does not
+                    # have a way to do this directly so we open via a stream.
+                    try:
+                        fz_stream = mupdf.fz_open_file(filename)
+                        doc = mupdf.fz_open_document_with_stream(filetype, fz_stream)
+                    except Exception as e:
+                        if g_exceptions_verbose > 1:    exception_info()
+                        raise FileDataError(f'Failed to open file {filename!r} as type {filetype!r}.') from e
+                else:
+                    try:
+                        doc = mupdf.fz_open_document(filename)
+                    except Exception as e:
+                        if g_exceptions_verbose > 1:    exception_info()
+>                       raise FileDataError(f'Failed to open file {filename!r}.') from e
+E                       pymupdf.FileDataError: Failed to open file 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'.
+
+..\..\..\..\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py:3026: FileDataError
+------------------------------ Captured log call ------------------------------
+ERROR    services.pdf_to_word:pdf_to_word.py:29 PdfToWordService failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py", line 3023, in __init__
+    doc = mupdf.fz_open_document(filename)
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pymupdf\mupdf.py", line 49158, in fz_open_document
+    return _mupdf.fz_open_document(filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+pymupdf.mupdf.FzErrorFormat: code=7: no objects found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\pdf_to_word.py", line 24, in execute
+    result = util_pdf_to_word(input_bytes)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\utils\convert.py", line 19, in pdf_to_word
+    return _pdf_to_word_bytes(bytes(pdf))
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\utils\convert.py", line 47, in _pdf_to_word_bytes
+    cv = Converter(pdf_path)
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pdf2docx\converter.py", line 59, in __init__
+    self._fitz_doc = fitz.Document(pdf_file)
+                     ~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Roaming\Python\Python313\site-packages\pymupdf\__init__.py", line 3026, in __init__
+    raise FileDataError(f'Failed to open file {filename!r}.') from e
+pymupdf.FileDataError: Failed to open file 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'.
+________________ test_pdf_to_images_adapter_zip_maps_exception ________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001B58C78D610>
+
+    def test_pdf_to_images_adapter_zip_maps_exception(monkeypatch):
+        from services.operations.pdf_to_images_adapter import pdf_to_images_adapter_zip
+    
+        class _Mapped(Exception):
+            pass
+    
+        monkeypatch.setattr(
+            "utils.images.pdf_to_images",
+            lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+        )
+        monkeypatch.setattr(
+            "services.operations.pdf_to_images_adapter.map_exception_for_operation",
+            lambda op, e: _Mapped(f"mapped:{op}"),
+        )
+    
+>       with pytest.raises(_Mapped, match="mapped:pdf_to_images"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE <class 'tests.test_phase4b_coverage_remediation_ops_classify.test_pdf_to_images_adapter_zip_maps_exception.<locals>._Mapped'>
+
+tests\test_phase4b_coverage_remediation_ops_classify.py:186: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_op_propagates_exception - Failed: DID NOT RAISE <class 'ValueError'>
+FAILED tests/test_phase4b_coverage_remediation_ops_classify.py::test_word_to_pdf_op_propagates_exception - Failed: DID NOT RAISE <class 'OSError'>
+FAILED tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_service_execute_none_from_util - AssertionError: Regex pattern did not match.
+  Expected regex: 'Conversion returned no output'
+  Actual message: "Failed to open file 'C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\tmp56muxq1h.pdf'."
+FAILED tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_word_service_execute_propagates_util_exception - pymupdf.FileDataError: Failed to open file 'C:\\Users\\Admin\\AppData\\Local\\Temp\\tmpo2qbh47m.pdf'.
+FAILED tests/test_phase4b_coverage_remediation_ops_classify.py::test_pdf_to_images_adapter_zip_maps_exception - Failed: DID NOT RAISE <class 'tests.test_phase4b_coverage_remediation_ops_classify.test_pdf_to_images_adapter_zip_maps_exception.<locals>._Mapped'>
+======================== 5 failed, 11 passed in 20.48s ========================

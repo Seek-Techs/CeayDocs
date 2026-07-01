@@ -32,5 +32,6 @@ jobs:
 
       - name: Tests + coverage
         run: |
-          pytest -q --disable-warnings --maxfail=1 --cov=core --cov=services --cov=utils --cov=api --cov=models --cov-fail-under=0
+          pytest -q --disable-warnings --maxfail=1 --cov=core --cov=services --cov=utils --cov=api --cov=models --cov-fail-under=80
+
 

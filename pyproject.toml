@@ -7,7 +7,7 @@ source = ["core", "services", "utils", "api", "models"]
 [tool.coverage.report]
 show_missing = true
 skip_covered = false
-fail_under = 0
+fail_under = 80
 
 [tool.ruff]
 line-length = 120
