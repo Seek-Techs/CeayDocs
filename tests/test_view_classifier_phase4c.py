@@ -35,15 +35,15 @@ def test_classify_pdf_views_iterates_pages_sets_page_and_snippet() -> None:
     # Patch fitz.open so classify_pdf_views runs without real PDFs.
     import services.view_classifier as vc
 
-doc = _Doc([_Page("PLAN"), _Page("SECTION")])
+    doc = _Doc([_Page("PLAN"), _Page("SECTION")])
 
-def _open(*args, **kwargs):  # noqa: ANN001
-
+    def _open(*args, **kwargs):  # noqa: ANN001
         return doc
 
     vc.fitz.open = _open  # type: ignore[assignment]
 
     res = classify_pdf_views(b"pdf")
+
     assert len(res) == 2
     assert res[0]["page"] == 1
     assert res[1]["page"] == 2

@@ -3,9 +3,9 @@ from __future__ import annotations
 import io
 from unittest.mock import patch
 
-
-
 from services.analyzer import analyze_drawing
+
+
 
 
 def test_analyze_drawing_invalid_input_returns_error_list() -> None:

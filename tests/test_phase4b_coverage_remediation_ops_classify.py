@@ -124,13 +124,13 @@ def test_pdf_to_word_service_execute_none_from_util(monkeypatch):
 
     import services.pdf_to_word as _pdf_to_word
 
+
     monkeypatch.setattr(_pdf_to_word, "util_pdf_to_word", lambda _: None)
 
     # Ensure util_pdf_to_word is a clean stub for this test.
 
-
-
     svc = PdfToWordService()
+
     with pytest.raises(RuntimeError, match="Conversion returned no output"):
         svc.execute(b"in")
 
@@ -166,7 +166,13 @@ def test_images_to_pdf_adapter_maps_exception(monkeypatch):
     class _Mapped(Exception):
         pass
 
-    monkeypatch.setattr("services.operations.images_to_pdf_adapter.images_to_pdf_op", lambda _: (_ for _ in ()).throw(ValueError("bad")))
+    monkeypatch.setattr(
+        "services.operations.images_to_pdf_adapter.images_to_pdf_op",
+        lambda _: (_ for _ in ()).throw(ValueError("bad")),
+    )
+
+
+
     monkeypatch.setattr(
         "services.operations.images_to_pdf_adapter.map_exception_for_operation",
         lambda op, e: _Mapped(str(op)),
