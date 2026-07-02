@@ -123,10 +123,9 @@ def test_pdf_to_word_service_execute_none_from_util(monkeypatch):
     from services.pdf_to_word import PdfToWordService
     import services.pdf_to_word as _pdf_to_word
 
-
-
-
     monkeypatch.setattr(_pdf_to_word, "util_pdf_to_word", lambda _: None)
+
+
 
     # Ensure util_pdf_to_word is a clean stub for this test.
 

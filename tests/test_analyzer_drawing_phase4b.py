@@ -5,12 +5,9 @@ from unittest.mock import patch
 
 from services.analyzer import analyze_drawing
 
-
-
-
-
-
 def test_analyze_drawing_invalid_input_returns_error_list() -> None:
+
+
     result = analyze_drawing(123)  # type: ignore[arg-type]
     assert result["classification"] == {}
     assert result["summary"] == {}
