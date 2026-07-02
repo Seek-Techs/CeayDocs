@@ -108,7 +108,9 @@ if menu == "PDF → Word":
             pdf_bytes = uploaded.read()
             output = pdf_to_word(pdf_bytes)
         st.success("Done!")
-        st.download_button("Download Word File", output, file_name="converted.docx")
+        original_name = uploaded.name.rsplit(".", 1)[0] if hasattr(uploaded, "name") else "output"
+        st.download_button("Download Word File", output, file_name=f"{original_name}_converted.docx")
+
 
 # ===== Word → PDF =====
 elif menu == "Word → PDF":
