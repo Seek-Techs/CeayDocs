@@ -286,7 +286,10 @@ elif menu == "Drawing Analyzer (AEC)":
         qa = generate_qa(index)
         rule_check = result.get("rule_check", {})  # keep original if present
         # show rule_check status from analyzer if available, else use our QA verdict
-        status = rule_check.get("status") or ("PASS" if not qa.get("missing_views") and not qa.get("scale_issues") else "FAIL")
+        qa_missing = not qa.get("missing_views")
+        qa_scale_ok = not qa.get("scale_issues")
+        status = rule_check.get("status") or ("PASS" if qa_missing and qa_scale_ok else "FAIL")
+
 
         if status == "PASS":
             st.success("✅ Drawing set satisfies project rules")

@@ -58,13 +58,33 @@ def main(pdf_input: str = str(DEFAULT_PDF_DIR / DEFAULT_PDF_FILE),
     elif pdf_path.is_file():
         convert_pdf_to_docx(pdf_input, output, start_page, end_page)
     else:
-        print(f"Error: {pdf_input} is not a valid file or directory. Ensure the PDF exists in {DEFAULT_PDF_DIR} or specify a valid path.")
+        print(
+            f"Error: {pdf_input} is not a valid file or directory. "
+            f"Ensure the PDF exists in {DEFAULT_PDF_DIR} or specify a valid path."
+        )
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert PDF to DOCX with scalable options.")
-    parser.add_argument("--input", default=str(DEFAULT_PDF_DIR / DEFAULT_PDF_FILE), help="Path to PDF file or directory")
-    parser.add_argument("--output", default=str(DEFAULT_OUTPUT_DIR / DEFAULT_DOCX_FILE), help="Path to output DOCX file or directory")
-    parser.add_argument("--start", type=int, default=0, help="Starting page number (0-based)")
+    parser.add_argument(
+        "--input",
+        default=str(DEFAULT_PDF_DIR / DEFAULT_PDF_FILE),
+        help="Path to PDF file or directory",
+    )
+
+    parser.add_argument(
+        "--output",
+        default=str(DEFAULT_OUTPUT_DIR / DEFAULT_DOCX_FILE),
+        help="Path to output DOCX file or directory",
+    )
+
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=0,
+        help="Starting page number (0-based)",
+    )
+
     parser.add_argument("--end", type=int, help="Ending page number (inclusive, None for all)")
     parser.add_argument("--batch", action="store_true", help="Process all PDFs in a directory")
     parser.add_argument("--executable", action="store_true", help="Get instructions to create a standalone executable")

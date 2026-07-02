@@ -7,13 +7,17 @@ from utils.split import split_pdf
 
 router = APIRouter()
 
+FILE_REQUIRED = File(...)
+
+
 
 @router.post("/")
 async def split_endpoint(
-    file: UploadFile = File(...),
+    file: UploadFile = FILE_REQUIRED,
     start: int = 1,
     end: int = 1
 ):
+
     pdf_bytes = await file.read()
     output = split_pdf(pdf_bytes, start, end)
 

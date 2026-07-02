@@ -14,7 +14,9 @@ def merge_pdfs_adapter(pdf_bytes_list: Iterable[bytes]) -> bytes:
     """Adapter: bytes[] -> bytes for PDF merging."""
     with elapsed_time("operation=merge_pdfs"):
         try:
-            logger.info("Starting merge_pdfs (count=%d)", sum(1 for _ in pdf_bytes_list) if not isinstance(pdf_bytes_list, list) else len(pdf_bytes_list))
+            count = (sum(1 for _ in pdf_bytes_list) if not isinstance(pdf_bytes_list, list) else len(pdf_bytes_list))
+            logger.info("Starting merge_pdfs (count=%d)", count)
+
             # Note: if pdf_bytes_list is an iterator, we can't iterate twice. Normalize.
             pdf_list = list(pdf_bytes_list)
             out = merge_pdfs_op(pdf_list)

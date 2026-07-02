@@ -7,9 +7,12 @@ from fastapi.responses import StreamingResponse
 
 router = APIRouter()
 
+FILE_LIST_REQUIRED = File(...)
+
 
 @router.post("/")
-async def merge_endpoint(files: list[UploadFile] = File(...)):
+async def merge_endpoint(files: list[UploadFile] = FILE_LIST_REQUIRED):
+
     if not files:
         raise bad_request("No files uploaded")
 

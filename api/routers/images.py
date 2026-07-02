@@ -7,9 +7,13 @@ from utils.images import images_to_pdf, pdf_to_images
 
 router = APIRouter()
 
+FILE_REQUIRED = File(...)
+
+
 
 @router.post("/pdf-to-images")
-async def pdf_to_images_endpoint(file: UploadFile = File(...)):
+async def pdf_to_images_endpoint(file: UploadFile = FILE_REQUIRED):
+
     pdf_bytes = await file.read()
     output = pdf_to_images(pdf_bytes)
 
@@ -21,7 +25,8 @@ async def pdf_to_images_endpoint(file: UploadFile = File(...)):
 
 
 @router.post("/images-to-pdf")
-async def images_to_pdf_endpoint(files: list[UploadFile] = File(...)):
+async def images_to_pdf_endpoint(files: list[UploadFile] = FILE_REQUIRED):
+
     images_bytes = [await f.read() for f in files]
     output = images_to_pdf(images_bytes)
 

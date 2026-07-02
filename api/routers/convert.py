@@ -8,9 +8,12 @@ from utils.convert import pdf_to_word
 
 router = APIRouter()
 
+FILE_REQUIRED = File(...)
+
 
 @router.post("/pdf-to-word")
-async def pdf_to_word_api(file: UploadFile = File(...)):
+async def pdf_to_word_api(file: UploadFile = FILE_REQUIRED):
+
     if not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files allowed")
 
