@@ -22,16 +22,26 @@ jobs:
           pip install pytest-cov ruff mypy bandit
 
       - name: Ruff
-        run: ruff check .
+        ruff check . --fix
+        ruff format .
+        ruff check .
 
       - name: Mypy
-        run: mypy .
+        run: mypy --explicit-package-bases .
 
       - name: Bandit
         run: bandit -r core services utils api models
 
-      - name: Tests + coverage
+      - name: Tests + Coverage
         run: |
-          pytest -q --disable-warnings --maxfail=1 --cov=core --cov=services --cov=utils --cov=api --cov=models --cov-fail-under=80
+          pytest \
+            --cov=core \
+            --cov=services \
+            --cov=utils \
+            --cov=api \
+            --cov=models \
+            --cov-report=term-missing \
+            --cov-report=xml \
+            --cov-fail-under=80
 
 
