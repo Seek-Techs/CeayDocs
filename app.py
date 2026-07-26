@@ -213,15 +213,18 @@ elif menu == "PDF → Images":
     pdf = st.file_uploader("Upload PDF", type=["pdf"])
     if pdf:
         with st.spinner("Extracting images..."):
-            images = pdf_to_images(pdf)  # returns list[BytesIO]
+            pdf_bytes = pdf.read() if hasattr(pdf, "read") else pdf
+            images = pdf_to_images(pdf_bytes)
         # create a ZIP for download
         import zipfile as _zipfile
         from io import BytesIO as _BytesIO
         zip_buf = _BytesIO()
         with _zipfile.ZipFile(zip_buf, "w") as z:
             for i, img in enumerate(images):
-                img.seek(0)
-                z.writestr(f"page_{i+1}.png", img.read())
+                buf = _BytesIO()
+                img.save(buf, format="PNG")
+                buf.seek(0)
+                z.writestr(f"page_{i+1}.png", buf.read())
         zip_buf.seek(0)
         st.download_button("Download Images ZIP", zip_buf.read(), file_name="images.zip")
 
