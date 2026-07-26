@@ -13,8 +13,8 @@ FILE_REQUIRED = File(...)
 
 @router.post("/pdf-to-word")
 async def pdf_to_word_api(file: UploadFile = FILE_REQUIRED):
-
-    if not file.filename.lower().endswith(".pdf"):
+    filename = file.filename or ""
+    if not filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files allowed")
 
     pdf_bytes = await file.read()
@@ -25,7 +25,7 @@ async def pdf_to_word_api(file: UploadFile = FILE_REQUIRED):
     output_bytes = pdf_to_word(pdf_bytes)
 
     file_name = generate_converted_filename(
-        file.filename,
+        filename,
         src_ext=".pdf",
         target_ext=".docx",
     )

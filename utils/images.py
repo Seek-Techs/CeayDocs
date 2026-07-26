@@ -10,7 +10,7 @@ from PIL import Image
 # ==============================
 # PDF → IMAGES
 # ==============================
-def pdf_to_images(pdf: object):
+def pdf_to_images(pdf: "bytes | object"):
     """Convert a PDF into PNG images.
 
     Test/backwards-compatible behavior:
@@ -87,10 +87,10 @@ def images_to_pdf(image_bytes_list):
         else:
             img_bytes = item
 
-        img = Image.open(BytesIO(img_bytes))
-        if img.mode != "RGB":
-            img = img.convert("RGB")
-        images.append(img)
+        pil_img = Image.open(BytesIO(img_bytes))
+        if pil_img.mode != "RGB":
+            pil_img = pil_img.convert("RGB")
+        images.append(pil_img)
 
     if not images:
         return b""

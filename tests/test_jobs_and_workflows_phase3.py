@@ -13,7 +13,7 @@ def test_operation_request_default_structures():
 
 
 def test_job_model_defaults():
-    job = Job(id="1", operation_type=OperationType.PDF_TO_WORD, status=JobStatus.PENDING)
+    job = Job(id="1", operation_type=OperationType.PDF_TO_WORD, status="PENDING")
     assert job.started_at is None
     assert job.completed_at is None
     assert job.error is None

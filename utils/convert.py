@@ -7,7 +7,7 @@ from pdf2docx import Converter
 
 
 # ---------- PDF → WORD ----------
-def pdf_to_word(pdf: bytes | Path | str, output: Path | str | None = None):
+def pdf_to_word(pdf: "bytes | Path | str", output: "Path | str | None" = None):
     """Convert PDF -> DOCX.
 
     Backwards-compatible with existing repo/test expectations:

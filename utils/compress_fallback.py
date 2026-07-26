@@ -19,7 +19,7 @@ def compress_pdf_fallback(pdf_file, dpi=120, jpeg_quality=60):
         pix = page.get_pixmap(dpi=dpi)
 
         # Convert pixmap → PIL Image
-        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+        img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
 
         # Compress image using JPEG quality
         img_bytes_io = io.BytesIO()

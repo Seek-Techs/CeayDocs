@@ -74,8 +74,8 @@ def generate_qa(index: List[Dict[str, Any]]) -> Dict[str, Any]:
         "low_confidence_pages": []
     }
 
-    seen_views = set()
-    scales_by_view = {}
+    seen_views: set[str] = set()
+    scales_by_view: dict[str, set[str]] = {}
 
     for row in index:
         vt = row["view_type"]

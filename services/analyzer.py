@@ -88,7 +88,7 @@ def analyze_drawing(pdf_input: Union[bytes, io.IOBase]) -> Dict[str, Any]:
     try:
         sp = split_views_into_pdfs(pdf_bytes) or {}
         # ensure bytes values
-        split_pdfs = {str(k): (v if isinstance(v, (bytes, bytearray)) else _read_bytes(v)) for k, v in sp.items()}
+        split_pdfs = {str(k): (v if isinstance(v, bytes) else _read_bytes(v)) for k, v in sp.items()}
     except Exception as exc:
         tb = traceback.format_exc()
         logger.exception("split_views_into_pdfs failed")
@@ -121,7 +121,7 @@ def analyze_drawing(pdf_input: Union[bytes, io.IOBase]) -> Dict[str, Any]:
                 else None
             )
 
-            scale = scale_map.get(page_num, "Unknown")
+            scale = scale_map.get(page_num, "Unknown") if page_num is not None else "Unknown"
             enriched_pages.append({
                 "page": page_num,
                 "view_type": view_type,

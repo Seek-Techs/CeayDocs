@@ -1,22 +1,23 @@
 # services/rule_engine.py
-from typing import Any, Dict, List
+from typing import Any, Dict, List, cast
 
 from services.rules import RULE_TEMPLATES
 
 
 def apply_rules(index: List[Dict[str, Any]], project_type: str) -> Dict[str, Any]:
-    rules = RULE_TEMPLATES.get(project_type.upper())
+    rules: dict[str, Any] | None = RULE_TEMPLATES.get(project_type.upper())
     if not rules:
         return {
             "status": "UNKNOWN_PROJECT_TYPE",
             "issues": [f"No rules defined for {project_type}"],
         }
 
-    issues = []
+    issues: list[str] = []
 
     # Check required views
     present_views = {row["view_type"] for row in index}
-    for rv in rules["required_views"]:
+    allowed_scales: dict[str, list[str]] = cast(dict[str, list[str]], rules.get("allowed_scales", {}))
+    for rv in cast(list[str], rules.get("required_views", [])):
         if rv not in present_views:
             issues.append(f"Missing required view: {rv}")
 
@@ -26,14 +27,14 @@ def apply_rules(index: List[Dict[str, Any]], project_type: str) -> Dict[str, Any
         sc = row["scale"]
         conf = row["confidence"]
 
-        if vt in rules["allowed_scales"]:
-            if sc not in rules["allowed_scales"][vt]:
+        if vt in allowed_scales:
+            if sc not in allowed_scales[vt]:
                 issues.append(
                     f"Invalid scale on page {row['page']} "
                     f"for {vt}: {sc}"
                 )
 
-        if conf is not None and conf < rules["min_confidence"]:
+        if conf is not None and conf < cast(float, rules.get("min_confidence", 0.0)):
             issues.append(
                 f"Low confidence on page {row['page']} ({vt})"
             )
