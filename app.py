@@ -109,7 +109,7 @@ if menu == "PDF → Word":
             output = pdf_to_word(pdf_bytes)
         st.success("Done!")
         original_name = uploaded.name.rsplit(".", 1)[0] if hasattr(uploaded, "name") else "output"
-        st.download_button("Download Word File", output, file_name=f"{original_name}_converted.docx")
+        st.download_button("Download Word File", output, file_name=f"{original_name}_converted.docx", mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 
 
 # ===== Word → PDF =====
@@ -121,7 +121,7 @@ elif menu == "Word → PDF":
             output = word_to_pdf(docx_bytes)
 
         st.success("Done!")
-        st.download_button("Download PDF File", output, file_name="converted.pdf")
+        st.download_button("Download PDF File", output, file_name="converted.pdf", mime="application/pdf")
 
 # ===== Merge PDFs =====
 elif menu == "Merge PDFs":
@@ -129,84 +129,96 @@ elif menu == "Merge PDFs":
     if uploaded_files:
         with st.spinner("Merging..."):
             output = merge_pdfs(uploaded_files)
-        st.download_button("Download Merged PDF", output, file_name="merged.pdf")
+        st.download_button("Download Merged PDF", output, file_name="merged.pdf", mime="application/pdf")
 
 # ===== Split PDF =====
 elif menu == "Split PDF":
     pdf = st.file_uploader("Upload PDF", type=["pdf"])
     if pdf:
-        start = st.number_input("Start Page", min_value=1, value=1)
-        end = st.number_input("End Page", min_value=1, value=1)
+        # Cache bytes to survive re-render
+        if "split_pdf_bytes" not in st.session_state:
+            st.session_state.split_pdf_bytes = pdf.read()
+        pdf_bytes = st.session_state.split_pdf_bytes
+
+        start = st.number_input("Start Page", min_value=1, value=1, key="split_start")
+        end = st.number_input("End Page", min_value=1, value=1, key="split_end")
         if st.button("Split"):
             with st.spinner("Splitting..."):
-                pdf_bytes = pdf.read()
-                output = split_pdf(pdf_bytes, start, end)
-            st.download_button("Download Split PDF", output, file_name="split.pdf")
+                # Use canonical bytes API via split_pdf_op
+                from services.operations.split_ops import split_pdf_op
+                output = split_pdf_op(pdf_bytes, int(start), int(end))
+            st.download_button("Download Split PDF", output, file_name="split.pdf", mime="application/pdf")
 
 # ===== Compress PDF =====
 elif menu == "Compress PDF":
-    def compression_ui():
-        st.header("📦 Compress PDF")
+    st.header("📦 Compress PDF")
 
-        uploaded = st.file_uploader("Upload PDF", type=["pdf"])
+    uploaded = st.file_uploader("Upload PDF", type=["pdf"])
 
-        if uploaded:
-            pdf_bytes = uploaded.read()
-            original_size = len(pdf_bytes)
+    if uploaded:
+        pdf_bytes = uploaded.read()
+        original_size = len(pdf_bytes)
 
-            st.info(f"Original file size: **{original_size / 1024:.2f} KB**")
+        st.info(f"Original file size: **{original_size / 1024:.2f} KB**")
 
-            st.subheader("Compression Settings")
+        st.subheader("Compression Settings")
 
-            preset = st.selectbox(
-                "Select Compression Level",
-                [
-                    "🔵 High Quality (Large File)",
-                    "🟢 Medium (Balanced)",
-                    "🟡 Low (Small File)",
-                    "🔴 Extreme (Minimum Size)"
-                ]
-            )
+        preset = st.selectbox(
+            "Select Compression Level",
+            [
+                "🔵 High Quality (Large File)",
+                "🟢 Medium (Balanced)",
+                "🟡 Low (Small File)",
+                "🔴 Extreme (Minimum Size)"
+            ],
+            key="compress_preset"
+        )
 
-            # Map preset to internal DPI + quality
-            preset_map = {
-                "🔵 High Quality (Large File)": (180, 80),
-                "🟢 Medium (Balanced)": (150, 60),
-                "🟡 Low (Small File)": (120, 40),
-                "🔴 Extreme (Minimum Size)": (100, 25),
-            }
+        # Map preset to internal DPI + quality
+        preset_map = {
+            "🔵 High Quality (Large File)": (180, 80),
+            "🟢 Medium (Balanced)": (150, 60),
+            "🟡 Low (Small File)": (120, 40),
+            "🔴 Extreme (Minimum Size)": (100, 25),
+        }
 
-            dpi, quality = preset_map[preset]
+        dpi, quality = preset_map[preset]
 
-            st.write(f"DPI: **{dpi}** | JPEG Quality: **{quality}%**")
+        st.write(f"DPI: **{dpi}** | JPEG Quality: **{quality}%**")
 
-            # Detect compressor type
-            if _find_ghostscript():
-                st.success("Using Ghostscript (best compression).")
-            else:
-                st.warning("Ghostscript not available — using fallback compressor.")
+        # Detect compressor type
+        if _find_ghostscript():
+            st.success("Using Ghostscript (best compression).")
+        else:
+            st.warning("Ghostscript not available — using fallback compressor.")
 
-            if st.button("🔧 Compress Now"):
-                with st.spinner("Compressing PDF... Please wait ⏳"):
+        if st.button("🔧 Compress Now", key="compress_button"):
+            with st.spinner("Compressing PDF... Please wait ⏳"):
+                try:
                     output_bytes = compress_pdf(
                         io.BytesIO(pdf_bytes),   # pass file-like object
+                        dpi=dpi,
+                        quality=quality,
                     )
+                except Exception as e:
+                    st.error(f"Compression failed: {e}")
+                    st.stop()
 
-                compressed_size = len(output_bytes)
-                ratio = compressed_size / original_size
+            compressed_size = len(output_bytes)
+            ratio = compressed_size / original_size
 
-                st.success("Compression successful!")
+            st.success("Compression successful!")
 
-                st.write(f"**New size:** {compressed_size / 1024:.2f} KB")
-                st.write(f"**Compression ratio:** {ratio:.2%}")
+            st.write(f"**New size:** {compressed_size / 1024:.2f} KB")
+            st.write(f"**Compression ratio:** {ratio:.2%}")
 
-                st.download_button(
-                    label="⬇️ Download Compressed PDF",
-                    data=output_bytes,
-                    file_name="compressed.pdf",
-                    mime="application/pdf",
-                )
-    compression_ui()
+            st.download_button(
+                label="⬇️ Download Compressed PDF",
+                data=output_bytes,
+                file_name="compressed.pdf",
+                mime="application/pdf",
+                key="download_compressed"
+            )
 
 # ===== PDF → Images =====
 elif menu == "PDF → Images":
@@ -237,7 +249,7 @@ elif menu == "Images → PDF":
     if imgs:
         with st.spinner("Converting..."):
             output = images_to_pdf(imgs)
-        st.download_button("Download PDF", output, file_name="images_to_pdf.pdf")
+        st.download_button("Download PDF", output, file_name="images_to_pdf.pdf", mime="application/pdf")
 
 # ===== Extract Text =====
 elif menu == "Extract Text from PDF":
@@ -247,7 +259,7 @@ elif menu == "Extract Text from PDF":
             pdf_bytes = pdf.read()
             text = extract_text_from_pdf(pdf_bytes)
         st.text_area("Extracted Text", text, height=400)
-        st.download_button("Download Text File", text, file_name="text.txt")
+        st.download_button("Download Text File", text.encode("utf-8"), file_name="text.txt", mime="text/plain")
 
 # ===== Drawing Analyzer (AEC) =====
 elif menu == "Drawing Analyzer (AEC)":

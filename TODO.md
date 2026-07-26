@@ -1,33 +1,15 @@
-# TODO - Phase 4A Completion (Coverage & Quality Gates)
+# Streamlit Application Repair
 
-## Phase 4A Steps
-- [ ] Understand repo quality gate configuration (coverage/ruff/mypy/bandit, CI workflow)
-- [ ] Coverage gap analysis:
-  - [ ] Identify lowest-covered modules
-  - [ ] Identify uncovered branches
-  - [ ] Identify untasted exception paths/workflows/models/utilities
-  - [ ] Rank modules by impact and estimate coverage gains
-  - [ ] Create docs/coverage_gap_analysis.md
-- [ ] Ruff compliance plan:
-  - [ ] Run ruff check
-  - [ ] Classify violations (genuine/legacy/intentional)
-  - [ ] Fix genuine issues
-  - [ ] Document rationale in docs/linting_strategy.md
-- [ ] Add tests only to raise coverage to >=80%
-  - [ ] Target modules: core/, services/, models/, utils introduced in Phases 2–3
-  - [ ] Cover success, failure, edge, boundary, and exception-handling paths
-- [ ] Ensure mypy passes
-  - [ ] Narrow types / add annotations only if needed
-  - [ ] Document exclusions if any
-- [ ] Ensure bandit passes
-  - [ ] Run bandit and document findings/false positives/accepted risks
-  - [ ] Create docs/security_scan_results.md
-- [ ] Restore quality gates
-  - [ ] Update coverage configuration to fail_under=80
-  - [ ] Ensure CI fails on coverage/ruff/mypy/bandit
-- [ ] CI verification
-  - [ ] Run the same commands as GitHub workflow locally
-  - [ ] Record results in final report
-- [ ] Final report (docs + completion)
-  - [ ] Coverage %, coverage increase, # new tests, ruff status, mypy status, bandit status, CI status, remaining debt, Phase 4 completion state
+## Fixes Checklist
+
+- [x] 1. **`utils/split.py`** — Fix legacy dispatch logic, eliminate TypeError fallthrough, fix return type
+- [x] 2. **`utils/compress.py`** — Accept optional `dpi` and `quality` parameters
+- [x] 3. **`app.py` — Split PDF** — Use canonical bytes API, add MIME type, handle bytes caching
+- [x] 4. **`app.py` — Compress PDF** — Inline nested function, pass dpi/quality, add exception handling
+- [x] 5. **`app.py` — Merge PDFs** — Add MIME type
+- [x] 6. **`app.py` — PDF → Word** — Add MIME type
+- [x] 7. **`app.py` — Images → PDF** — Add MIME type
+- [x] 8. **`app.py` — Extract Text** — Add MIME type, encode as bytes
+- [x] 9. **`app.py` — Drawing Analyzer** — Fix register CSV download to bytes, add MIME types
+- [x] 10. **Run smoke tests** — Verify all fixes (9/9 passed; 7/7 unit tests passed)
 

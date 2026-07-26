@@ -16,16 +16,30 @@ def _find_ghostscript():
     return None
 
 
-def compress_pdf(pdf_file):
+def compress_pdf(pdf_file, dpi: int | None = None, quality: int | None = None):
     """
     Compress PDF using Ghostscript if available,
     otherwise use pure-Python fallback.
+
+    Parameters
+    ----------
+    pdf_file : file-like
+        The PDF file to compress.
+    dpi : int, optional
+        Target DPI for fallback compression.
+    quality : int, optional
+        JPEG quality (0-100) for fallback compression.
     """
     gs = _find_ghostscript()
 
     # If Ghostscript NOT found → use fallback
+    kwargs = {}
+    if dpi is not None:
+        kwargs["dpi"] = dpi
+    if quality is not None:
+        kwargs["jpeg_quality"] = quality
     if not gs:
-        return compress_pdf_fallback(pdf_file)
+        return compress_pdf_fallback(pdf_file, **kwargs)
 
     # If Ghostscript found → use system-level compression
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:

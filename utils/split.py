@@ -32,18 +32,8 @@ def split_pdf(pdf: str | bytes | bytearray, output: str | None = None, start: in
             return _split_pdf_bytes(pdf_bytes, output, start)
 
         # Legacy bytes API: called as split_pdf(pdf_bytes, start, end)
-        # where output is None (start is the third positional arg 'end').
-        if output is None:
-            # This is the case: split_pdf(pdf_bytes, start_value, end_value)
-            # where start_value got stored in 'output' param (None),
-            # and end_value got stored in 'start' param, 'end' param defaulted.
-            # Actually this means: called with only 2 positional args after pdf_bytes.
-            if start == 1 and end == 1:
-                raise TypeError("Invalid call: missing start/end page numbers")
-            # start holds start page (2nd positional), end holds end page (3rd positional)
-            return _split_pdf_bytes(pdf_bytes, start, end)
-
-        raise TypeError("Use bytes API via split_pdf_bytes")
+        # where 'start' param holds start page, 'end' param holds end page.
+        return _split_pdf_bytes(pdf_bytes, start, end)
 
 
     input_path = Path(pdf)
