@@ -19,6 +19,8 @@ from utils.images import images_to_pdf, pdf_to_images
 from utils.merge import merge_pdfs
 from utils.split import split_pdf
 
+st.set_page_config(page_title="Document Tools", page_icon="📄", layout="wide")
+
 # paths
 ASSETS = Path(__file__).parent / "assets"
 LOGO_LIGHT = ASSETS / "ceaydocs_logo_light.png"
@@ -79,8 +81,6 @@ except Exception:
 # small branded footer in sidebar
 st.sidebar.markdown("---")
 st.sidebar.markdown("© 2025 CeayDocs — Built by Yusuff O. Sikiru")
-
-st.set_page_config(page_title="Document Tools", page_icon="📄", layout="wide")
 
 st.title("📄 Document Toolkit")
 st.write("A simple multi-tool web application to help you process PDF and Word documents.")
