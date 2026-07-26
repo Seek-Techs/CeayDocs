@@ -238,7 +238,8 @@ elif menu == "Extract Text from PDF":
     pdf = st.file_uploader("Upload PDF", type=["pdf"])
     if pdf:
         with st.spinner("Extracting text..."):
-            text = extract_text_from_pdf(pdf)
+            pdf_bytes = pdf.read()
+            text = extract_text_from_pdf(pdf_bytes)
         st.text_area("Extracted Text", text, height=400)
         st.download_button("Download Text File", text, file_name="text.txt")
 

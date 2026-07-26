@@ -4500,3 +4500,288 @@ Traceback (most recent call last):
 RuntimeError: util failed
 2026-06-25 17:23:44 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.009s
 2026-06-25 17:23:45 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-07-26 17:30:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:31:14 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-07-26 17:31:14 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=19.373s
+2026-07-26 17:31:14 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:31:14 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-07-26 17:31:14 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.058s
+2026-07-26 17:31:16 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:31:18 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-07-26 17:31:18 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.621s
+2026-07-26 17:31:18 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-07-26 17:31:19 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-07-26 17:31:19 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.244s
+2026-07-26 17:31:19 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-07-26 17:31:19 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-07-26 17:31:19 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.248s
+2026-07-26 17:31:19 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:31:19 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-07-26 17:31:19 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.094s
+2026-07-26 17:31:38 | test_logger_core | INFO | hello core foundation
+2026-07-26 17:31:38 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-07-26 17:31:41 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-07-26 17:31:41 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-07-26 17:31:41 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-07-26 17:31:41 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-07-26 17:31:41 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:31:57 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-07-26 17:31:57 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=15.881s
+2026-07-26 17:31:58 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:31:58 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-07-26 17:31:58 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.057s
+2026-07-26 17:31:58 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-07-26 17:31:58 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-07-26 17:31:58 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.150s
+2026-07-26 17:31:58 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-07-26 17:31:58 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-07-26 17:31:58 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.189s
+2026-07-26 17:31:58 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:31:59 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.548s
+2026-07-26 17:31:59 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:31:59 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.046s
+2026-07-26 17:31:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:31:59 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-07-26 17:31:59 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:31:59 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-07-26 17:31:59 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-07-26 17:31:59 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-07-26 17:31:59 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:31:59 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.007s
+2026-07-26 17:31:59 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:31:59 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-07-26 17:31:59 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.399s
+2026-07-26 17:31:59 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:32:00 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-07-26 17:32:00 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-07-26 17:32:00 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:32:00 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-07-26 17:32:00 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.002s
+2026-07-26 17:32:00 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-07-26 17:32:00 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-07-26 17:32:00 | services.operations.images_to_pdf_adapter | INFO | Completed images_to_pdf (out_bytes=3)
+2026-07-26 17:32:00 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.001s
+2026-07-26 17:32:00 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-07-26 17:32:00 | services.operations.images_to_pdf_adapter | ERROR | images_to_pdf failed (mapped=_Mapped original=ValueError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\images_to_pdf_adapter.py", line 17, in images_to_pdf_adapter
+    out = images_to_pdf_op(image_bytes_list)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 171, in <lambda>
+    lambda _: (_ for _ in ()).throw(ValueError("bad")),
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 171, in <genexpr>
+    lambda _: (_ for _ in ()).throw(ValueError("bad")),
+ValueError: bad
+2026-07-26 17:32:00 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.006s
+2026-07-26 17:32:00 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-07-26 17:32:00 | services.operations.pdf_to_images_adapter | INFO | Completed pdf_to_images (zip_bytes=3)
+2026-07-26 17:32:00 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.001s
+2026-07-26 17:32:00 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-07-26 17:32:00 | services.operations.pdf_to_images_adapter | ERROR | pdf_to_images failed (mapped=_Mapped original=RuntimeError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\pdf_to_images_adapter.py", line 16, in pdf_to_images_adapter_zip
+    out = pdf_to_images(pdf_bytes)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 203, in <lambda>
+    lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 203, in <genexpr>
+    lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+RuntimeError: util failed
+2026-07-26 17:32:00 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.071s
+2026-07-26 17:32:01 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-07-26 17:32:15 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:32:24 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-07-26 17:32:24 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=8.201s
+2026-07-26 17:32:24 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:32:24 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-07-26 17:32:24 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.100s
+2026-07-26 17:32:24 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:32:26 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-07-26 17:32:26 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=2.318s
+2026-07-26 17:32:26 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-07-26 17:32:27 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-07-26 17:32:27 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.117s
+2026-07-26 17:32:27 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-07-26 17:32:27 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-07-26 17:32:27 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.099s
+2026-07-26 17:32:27 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:32:27 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-07-26 17:32:27 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.051s
+2026-07-26 17:32:37 | test_logger_core | INFO | hello core foundation
+2026-07-26 17:32:37 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-07-26 17:32:38 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-07-26 17:32:38 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.000s file_size_bytes=None
+2026-07-26 17:32:38 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-07-26 17:32:38 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.001s file_size_bytes=None
+2026-07-26 17:32:38 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:32:47 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-07-26 17:32:47 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=9.095s
+2026-07-26 17:32:47 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:32:47 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-07-26 17:32:47 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.034s
+2026-07-26 17:32:47 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-07-26 17:32:47 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-07-26 17:32:47 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.114s
+2026-07-26 17:32:47 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-07-26 17:32:48 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.094s
+2026-07-26 17:32:48 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:32:48 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.307s
+2026-07-26 17:32:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:32:48 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.041s
+2026-07-26 17:32:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:32:48 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-07-26 17:32:48 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:32:48 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.002s
+2026-07-26 17:32:48 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-07-26 17:32:48 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-07-26 17:32:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:32:48 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.003s
+2026-07-26 17:32:48 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:32:48 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.115s
+2026-07-26 17:32:48 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:32:48 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-07-26 17:32:48 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:32:48 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.009s
+2026-07-26 17:32:48 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-07-26 17:32:48 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-07-26 17:32:48 | services.operations.images_to_pdf_adapter | INFO | Completed images_to_pdf (out_bytes=3)
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.001s
+2026-07-26 17:32:48 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-07-26 17:32:48 | services.operations.images_to_pdf_adapter | ERROR | images_to_pdf failed (mapped=_Mapped original=ValueError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\images_to_pdf_adapter.py", line 17, in images_to_pdf_adapter
+    out = images_to_pdf_op(image_bytes_list)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 171, in <lambda>
+    lambda _: (_ for _ in ()).throw(ValueError("bad")),
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 171, in <genexpr>
+    lambda _: (_ for _ in ()).throw(ValueError("bad")),
+ValueError: bad
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.013s
+2026-07-26 17:32:48 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-07-26 17:32:48 | services.operations.pdf_to_images_adapter | INFO | Completed pdf_to_images (zip_bytes=3)
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.001s
+2026-07-26 17:32:48 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-07-26 17:32:48 | services.operations.pdf_to_images_adapter | ERROR | pdf_to_images failed (mapped=_Mapped original=RuntimeError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\pdf_to_images_adapter.py", line 16, in pdf_to_images_adapter_zip
+    out = pdf_to_images(pdf_bytes)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 203, in <lambda>
+    lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 203, in <genexpr>
+    lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+RuntimeError: util failed
+2026-07-26 17:32:48 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.004s
+2026-07-26 17:32:49 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
+2026-07-26 17:37:16 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:37:25 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-07-26 17:37:25 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=8.789s
+2026-07-26 17:37:25 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:37:25 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-07-26 17:37:25 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.051s
+2026-07-26 17:37:26 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:37:28 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-07-26 17:37:28 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=1.888s
+2026-07-26 17:37:28 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-07-26 17:37:28 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-07-26 17:37:28 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.129s
+2026-07-26 17:37:28 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-07-26 17:37:28 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-07-26 17:37:28 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.091s
+2026-07-26 17:37:28 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:37:28 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-07-26 17:37:28 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.062s
+2026-07-26 17:37:38 | test_logger_core | INFO | hello core foundation
+2026-07-26 17:37:38 | core.telemetry | INFO | operation=unit-test-op elapsed=0.000s
+2026-07-26 17:37:40 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-07-26 17:37:40 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.003s file_size_bytes=None
+2026-07-26 17:37:40 | core.telemetry | INFO | operation=job_executor.operation=PDF_TO_WORD elapsed=0.000s
+2026-07-26 17:37:40 | core.metrics | INFO | metrics operation=PDF_TO_WORD success=True duration=0.007s file_size_bytes=None
+2026-07-26 17:37:40 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:37:53 | services.operations.pdf_to_word_adapter | INFO | Completed PDF -> Word conversion (out_bytes=11899194)
+2026-07-26 17:37:53 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=12.647s
+2026-07-26 17:37:53 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:37:53 | services.operations.word_to_pdf_adapter | INFO | Completed Word -> PDF conversion (out_bytes=53)
+2026-07-26 17:37:53 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.071s
+2026-07-26 17:37:53 | services.operations.merge_pdf_adapter | INFO | Starting merge_pdfs (count=2)
+2026-07-26 17:37:53 | services.operations.merge_pdf_adapter | INFO | Completed merge_pdfs (out_bytes=3190350)
+2026-07-26 17:37:53 | core.telemetry | INFO | operation=operation=merge_pdfs elapsed=0.148s
+2026-07-26 17:37:53 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=1,end=1)
+2026-07-26 17:37:53 | services.operations.split_pdf_adapter | INFO | Completed split_pdf (out_bytes=1595328)
+2026-07-26 17:37:53 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.183s
+2026-07-26 17:37:54 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:37:54 | services.operations.compress_pdf_adapter | INFO | Completed compress_pdf (out_bytes=174531)
+2026-07-26 17:37:54 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.850s
+2026-07-26 17:37:54 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:37:54 | services.operations.extract_text_adapter | INFO | Completed extract_text (chars=1)
+2026-07-26 17:37:54 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.045s
+2026-07-26 17:37:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:37:55 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=FileNotFoundError): missing
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-07-26 17:37:55 | services.operations.pdf_to_word_adapter | INFO | Starting PDF -> Word conversion
+2026-07-26 17:37:55 | services.operations.pdf_to_word_adapter | ERROR | PDF -> Word conversion failed (mapped=FileValidationError original=ValueError): Unsupported file extension: .xyz
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=pdf_to_word elapsed=0.001s
+2026-07-26 17:37:55 | services.operations.split_pdf_adapter | INFO | Starting split_pdf (start=5,end=1)
+2026-07-26 17:37:55 | services.operations.split_pdf_adapter | ERROR | split_pdf failed (mapped=FileValidationError original=ValueError): Invalid page range
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=split_pdf elapsed=0.001s
+2026-07-26 17:37:55 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:37:55 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=ConversionError original=PDFSyntaxError): No /Root object! - Is this really a PDF?
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.022s
+2026-07-26 17:37:55 | services.operations.compress_pdf_adapter | INFO | Starting compress_pdf
+2026-07-26 17:37:55 | services.operations.compress_pdf_adapter | ERROR | compress_pdf failed (mapped=CompressionError original=FileDataError): Failed to open stream
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=compress_pdf elapsed=0.147s
+2026-07-26 17:37:55 | services.operations.extract_text_adapter | INFO | Starting extract_text
+2026-07-26 17:37:55 | services.operations.extract_text_adapter | ERROR | extract_text failed (mapped=OCRProcessingError original=RuntimeError): tesseract: failed to initialize OCR
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=extract_text elapsed=0.001s
+2026-07-26 17:37:55 | services.operations.word_to_pdf_adapter | INFO | Starting Word -> PDF conversion
+2026-07-26 17:37:55 | services.operations.word_to_pdf_adapter | ERROR | Word -> PDF conversion failed (mapped=ConversionError original=RuntimeError): soffice failed with exit status 1
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=word_to_pdf elapsed=0.001s
+2026-07-26 17:37:55 | core.metrics | INFO | metrics operation=unit-test-metrics success=True duration=0.001s file_size_bytes=None
+2026-07-26 17:37:55 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-07-26 17:37:55 | services.operations.images_to_pdf_adapter | INFO | Completed images_to_pdf (out_bytes=3)
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.001s
+2026-07-26 17:37:55 | services.operations.images_to_pdf_adapter | INFO | Starting images_to_pdf (count=1)
+2026-07-26 17:37:55 | services.operations.images_to_pdf_adapter | ERROR | images_to_pdf failed (mapped=_Mapped original=ValueError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\images_to_pdf_adapter.py", line 17, in images_to_pdf_adapter
+    out = images_to_pdf_op(image_bytes_list)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 171, in <lambda>
+    lambda _: (_ for _ in ()).throw(ValueError("bad")),
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 171, in <genexpr>
+    lambda _: (_ for _ in ()).throw(ValueError("bad")),
+ValueError: bad
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=images_to_pdf elapsed=0.006s
+2026-07-26 17:37:55 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-07-26 17:37:55 | services.operations.pdf_to_images_adapter | INFO | Completed pdf_to_images (zip_bytes=3)
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.001s
+2026-07-26 17:37:55 | services.operations.pdf_to_images_adapter | INFO | Starting pdf_to_images (zip)
+2026-07-26 17:37:55 | services.operations.pdf_to_images_adapter | ERROR | pdf_to_images failed (mapped=_Mapped original=RuntimeError)
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\services\operations\pdf_to_images_adapter.py", line 16, in pdf_to_images_adapter_zip
+    out = pdf_to_images(pdf_bytes)
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 203, in <lambda>
+    lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Documents\Python project\2026\ceaydocs\tests\test_phase4b_coverage_remediation_ops_classify.py", line 203, in <genexpr>
+    lambda _: (_ for _ in ()).throw(RuntimeError("util failed")),
+RuntimeError: util failed
+2026-07-26 17:37:55 | core.telemetry | INFO | operation=operation=pdf_to_images elapsed=0.003s
+2026-07-26 17:37:56 | core.telemetry | INFO | operation=unit-test-operation elapsed=0.000s
