@@ -4,24 +4,45 @@ from pathlib import Path
 from PyPDF2 import PdfReader, PdfWriter
 
 
-def split_pdf(pdf: str, output: str | None = None, start: int = 1, end: int = 1) -> bytes:
+def split_pdf(pdf: str | bytes | bytearray, output: str | None = None, start: int = 1, end: int = 1) -> bytes | None:
     """Backwards-compatible.
+
+    Supports three calling conventions:
+
+    1. Path-based:     split_pdf(input_path, output_path, start=..., end=...) -> None
+    2. Canonical bytes: split_pdf(pdf_bytes, output="__bytes_output__", start=..., end=...) -> bytes
+    3. Legacy bytes:   split_pdf(pdf_bytes, start, end) -> bytes    (where start/end are positional ints)
 
     Test expects: split_pdf(input_path, output_path, start=..., end=...) and returns None.
     Existing code expects: split_pdf(pdf_bytes, start, end) -> bytes.
     """
-# bytes API: split_pdf(pdf_bytes, start, end)
+    # bytes API: split_pdf(pdf_bytes, start, end)  or
+    #            split_pdf(pdf_bytes, output="__bytes_output__", start=..., end=...)
     if isinstance(pdf, (bytes, bytearray)):
         pdf_bytes = bytes(pdf)
-        # Support bytes API signatures used by existing ops/adapters.
-        # Canonical behavior: return bytes.
+
+        # Canonical bytes API via sentinel
         if output == "__bytes_output__":
             return _split_pdf_bytes(pdf_bytes, start, end)
-        # Backward-compat / legacy path: if called without the expected sentinel,
-        # raise to preserve historical behavior.
+
+        # Legacy bytes API: called as split_pdf(pdf_bytes, start, end)
+        # where 'output' param actually holds 'start' as an integer.
+        if isinstance(output, int):
+            # output param is actually the start page number
+            return _split_pdf_bytes(pdf_bytes, output, start)
+
+        # Legacy bytes API: called as split_pdf(pdf_bytes, start, end)
+        # where output is None (start is the third positional arg 'end').
         if output is None:
-            # called like split_pdf(pdf_bytes, start, end) where output param holds start
-            raise TypeError("Invalid call signature")
+            # This is the case: split_pdf(pdf_bytes, start_value, end_value)
+            # where start_value got stored in 'output' param (None),
+            # and end_value got stored in 'start' param, 'end' param defaulted.
+            # Actually this means: called with only 2 positional args after pdf_bytes.
+            if start == 1 and end == 1:
+                raise TypeError("Invalid call: missing start/end page numbers")
+            # start holds start page (2nd positional), end holds end page (3rd positional)
+            return _split_pdf_bytes(pdf_bytes, start, end)
+
         raise TypeError("Use bytes API via split_pdf_bytes")
 
 
