@@ -213,8 +213,11 @@ elif menu == "PDF → Images":
     pdf = st.file_uploader("Upload PDF", type=["pdf"])
     if pdf:
         with st.spinner("Extracting images..."):
-            pdf_bytes = pdf.read() if hasattr(pdf, "read") else pdf
-            images = pdf_to_images(pdf_bytes)
+            # Pass file-like object directly so pdf_to_images dispatches to
+            # _pdf_to_images_list() which returns List[PIL.Image].
+            # Passing raw bytes would go to _pdf_to_images_zip_bytes() and
+            # return ZIP bytes, breaking the iteration below.
+            images = pdf_to_images(pdf)
         # create a ZIP for download
         import zipfile as _zipfile
         from io import BytesIO as _BytesIO

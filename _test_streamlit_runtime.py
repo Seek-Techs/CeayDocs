@@ -61,8 +61,18 @@ def test_compress_pdf():
 
 
 def test_pdf_to_images():
-    """Simulate: pdf.read() -> pdf_to_images(pdf_bytes) -> zip with PIL save"""
-    images = _pdf_to_images_list(PDF_BYTES)
+    """Simulate: pass file-like object (uploaded file) -> pdf_to_images()"""
+    from utils.images import pdf_to_images
+
+    # Simulate Streamlit's UploadedFile behavior: pass file-like object
+    file_like = BytesIO(PDF_BYTES)
+    file_like.name = "sample.pdf"  # simulate UploadedFile.name
+
+    # This is the exact code path used in app.py (after the fix):
+    #   images = pdf_to_images(pdf)   where pdf is an UploadedFile (file-like)
+    images = pdf_to_images(file_like)
+
+    assert isinstance(images, list), f"Expected list[PIL.Image], got {type(images)}"
     assert len(images) > 0
     img = images[0]
     # Verify it's a PIL Image with .save()
