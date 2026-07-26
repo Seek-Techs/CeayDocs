@@ -22,9 +22,10 @@ jobs:
           pip install pytest-cov ruff mypy bandit
 
       - name: Ruff
-        ruff check . --fix
-        ruff format .
-        ruff check .
+        run: |
+          ruff check . --fix
+          ruff format .
+          ruff check .
 
       - name: Mypy
         run: mypy --explicit-package-bases .
