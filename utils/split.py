@@ -1,41 +1,28 @@
+from __future__ import annotations
+
 import tempfile
 from pathlib import Path
 
 from PyPDF2 import PdfReader, PdfWriter
 
 
-def split_pdf(pdf: str | bytes | bytearray, output: str | None = None, start: int = 1, end: int = 1) -> bytes | None:
-    """Backwards-compatible.
+def split_pdf(pdf: str | bytes | bytearray,  # noqa: PLR0911
+              output: str | None = None,
+              start: int = 1,
+              end: int = 1) -> bytes | None:
+    """Split a PDF page range.
 
-    Supports three calling conventions:
+    Supports two calling conventions:
 
-    1. Path-based:     split_pdf(input_path, output_path, start=..., end=...) -> None
-    2. Canonical bytes: split_pdf(pdf_bytes, output="__bytes_output__", start=..., end=...) -> bytes
-    3. Legacy bytes:   split_pdf(pdf_bytes, start, end) -> bytes    (where start/end are positional ints)
-
-    Test expects: split_pdf(input_path, output_path, start=..., end=...) and returns None.
-    Existing code expects: split_pdf(pdf_bytes, start, end) -> bytes.
+    1. Path-based:  split_pdf(input_path, output_path, start=..., end=...) -> None
+    2. Bytes API:   split_pdf(pdf_bytes, start=..., end=...) -> bytes
     """
-    # bytes API: split_pdf(pdf_bytes, start, end)  or
-    #            split_pdf(pdf_bytes, output="__bytes_output__", start=..., end=...)
+    # --- Bytes API (clean) ---
     if isinstance(pdf, (bytes, bytearray)):
         pdf_bytes = bytes(pdf)
-
-        # Canonical bytes API via sentinel
-        if output == "__bytes_output__":
-            return _split_pdf_bytes(pdf_bytes, start, end)
-
-        # Legacy bytes API: called as split_pdf(pdf_bytes, start, end)
-        # where 'output' param actually holds 'start' as an integer.
-        if isinstance(output, int):
-            # output param is actually the start page number
-            return _split_pdf_bytes(pdf_bytes, output, start)
-
-        # Legacy bytes API: called as split_pdf(pdf_bytes, start, end)
-        # where 'start' param holds start page, 'end' param holds end page.
         return _split_pdf_bytes(pdf_bytes, start, end)
 
-
+    # --- Path-based API ---
     input_path = Path(pdf)
     if output is None:
         raise TypeError("output is required for path-based split")

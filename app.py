@@ -241,7 +241,7 @@ elif menu == "PDF → Images":
                 buf.seek(0)
                 z.writestr(f"page_{i+1}.png", buf.read())
         zip_buf.seek(0)
-        st.download_button("Download Images ZIP", zip_buf.read(), file_name="images.zip")
+        st.download_button("Download Images ZIP", zip_buf.read(), file_name="images.zip", mime="application/zip")
 
 # ===== Images → PDF =====
 elif menu == "Images → PDF":
@@ -471,7 +471,7 @@ elif menu == "Drawing Analyzer (AEC)":
             csv = df_reg.to_csv(index=False)
             st.download_button(
                 "⬇️ Download Drawing Register",
-                csv,
+                csv.encode("utf-8"),
                 file_name="drawing_register.csv",
                 mime="text/csv"
             )

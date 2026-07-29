@@ -6,3 +6,4 @@ __pycache__/
 .idea/
 assets/*.png
 assets/*.ico
+logs/
